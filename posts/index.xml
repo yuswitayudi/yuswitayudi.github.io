@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on AWNESIA</title>
+    <link>https://yuswitayudi.github.io/posts/</link>
+    <description>Recent content in Posts on AWNESIA</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Feb 2019 10:55:26 +0700</lastBuildDate>
+    
+	<atom:link href="https://yuswitayudi.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My First Post</title>
+      <link>https://yuswitayudi.github.io/posts/my-first-post/</link>
+      <pubDate>Wed, 13 Feb 2019 10:55:26 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/posts/my-first-post/</guid>
+      <description> welcome with this site oke lah  </description>
+    </item>
+    
+  </channel>
+</rss>
