@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		
+		<meta name="generator" content="Hugo 0.74.3" />
+		<title>Hal-hal yang perlu diperhatikan untuk menerapkan Zero Downtime pada k8s &middot; AWNESIA | SCBA (Sekedar Catatan Biasa Aja)</title>
+		<link rel="shortcut icon" href="https://yuswitayudi.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://yuswitayudi.github.io/css/style.css">
+		<link rel="stylesheet" href="https://yuswitayudi.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://yuswitayudi.github.io/css/monosocialiconsfont.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://yuswitayudi.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://yuswitayudi.github.io/posts'>Archive</a>
+	<a href='https://yuswitayudi.github.io/tags'>Tags</a>
+	<a href='https://yuswitayudi.github.io/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Hal-hal yang perlu diperhatikan untuk menerapkan Zero Downtime pada k8s
+                    </h1>
+                    <h2 class="headline">
+                    Sep 20, 2022 10:05
+                    · 254 words
+                    · 2 minute read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p>Okee, untuk kali ini catatan yang akan ditulis adalah mengenai hal-hal apa yang perlu diperhatikan ketika menerapkan Zero Downtime pada kubernetes.</p>
+<h2 id="pertama--replicasets">Pertama | ReplicaSets</h2>
+<p>Menentukan ReplicaSets pada jumlah batas minimum, yaitu 3. Kenapa demikian? Ini dikarenakan jika suatu saat ada pods kita yang crash kita masih memiliki pods yang lain yang masih berjalan.</p>
+<p>Links terkait <a href="https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/">ReplicaSets</a></p>
+<h2 id="kedua--podantiaffinity">Kedua | podAntiAffinity</h2>
+<p>Bayangkan apabila anda memiliki 3 replicasets, akan tetapi semuanya berada pada 1 node dan node itu tidak bisa diakses. Maka semua service tidak bisa diakses juga, maka butuh yang namanya &ldquo;podAntiAffinity&rdquo; yang berguna untuk melakukan pemasangan pod sesuai dengan rule yang sudah kita tentukan.</p>
+<p>Pada kasus ini jika kita memiliki 3 replicasets, maka hal yang terbaik yang bisa kita lakukan adalah memisah replica tersebut ke setiap node yang kita miliki, sehingga tidak menumpuk di 1 node saja. Apa bila sewaktu-waktu ada node yang tidak bisa diakses, masih ada replicasets kita yang berjalan pada node lain.</p>
+<p>Links terkait <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity">podAntiAffinity</a></p>
+<p>contoh yaml</p>
+<pre><code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-cache
+spec:
+  selector:
+    matchLabels:
+      app: store
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: store
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - store
+            topologyKey: &quot;kubernetes.io/hostname&quot;
+      containers:
+      - name: redis-server
+        image: redis:3.2-alpine
+</code></pre><h2 id="ketiga--resource-declaration">Ketiga | Resource Declaration</h2>
+<p>Ini perlu untuk ditentukan untuk menanggulangi ketika node mengalami overused, dikarenakan dari deployment yang sudah terpasang menggunakan default resource, padahal untuk penggunaan tidak terlalu tinggi.</p>
+<p>Maka perlu adanya deklarasi untuk minimum dan maksimum resources, agar setiap pod yang jalan menggunakan resource sesuai kebutuhan saja.</p>
+<p>Link terkait <a href="https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/">Resource Declaration</a></p>
+<p>tobecontinue&hellip;..</p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2022 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://yuswitayudi.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://yuswitayudi.github.io/js/main.js"></script>
+<script src="https://yuswitayudi.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>

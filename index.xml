@@ -6,10 +6,22 @@
     <description>Recent content on AWNESIA | SCBA (Sekedar Catatan Biasa Aja)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Jul 2022 14:26:37 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 20 Sep 2022 10:05:59 +0700</lastBuildDate>
     
 	<atom:link href="https://yuswitayudi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hal-hal yang perlu diperhatikan untuk menerapkan Zero Downtime pada k8s</title>
+      <link>https://yuswitayudi.github.io/posts/zerodowntime-deployment-k8s/</link>
+      <pubDate>Tue, 20 Sep 2022 10:05:59 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/posts/zerodowntime-deployment-k8s/</guid>
+      <description>Okee, untuk kali ini catatan yang akan ditulis adalah mengenai hal-hal apa yang perlu diperhatikan ketika menerapkan Zero Downtime pada kubernetes.
+Pertama | ReplicaSets Menentukan ReplicaSets pada jumlah batas minimum, yaitu 3. Kenapa demikian? Ini dikarenakan jika suatu saat ada pods kita yang crash kita masih memiliki pods yang lain yang masih berjalan.
+Links terkait ReplicaSets
+Kedua | podAntiAffinity Bayangkan apabila anda memiliki 3 replicasets, akan tetapi semuanya berada pada 1 node dan node itu tidak bisa diakses.</description>
+    </item>
     
     <item>
       <title>Cara posting menggunakan hugo</title>
