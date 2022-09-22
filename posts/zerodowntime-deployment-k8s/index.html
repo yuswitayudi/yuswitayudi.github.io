@@ -46,8 +46,8 @@
                     </h1>
                     <h2 class="headline">
                     Sep 20, 2022 10:05
-                    · 254 words
-                    · 2 minute read
+                    · 428 words
+                    · 3 minute read
                       <span class="tags">
                       
                       </span>
@@ -95,7 +95,19 @@ spec:
 <p>Ini perlu untuk ditentukan untuk menanggulangi ketika node mengalami overused, dikarenakan dari deployment yang sudah terpasang menggunakan default resource, padahal untuk penggunaan tidak terlalu tinggi.</p>
 <p>Maka perlu adanya deklarasi untuk minimum dan maksimum resources, agar setiap pod yang jalan menggunakan resource sesuai kebutuhan saja.</p>
 <p>Link terkait <a href="https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/">Resource Declaration</a></p>
-<p>tobecontinue&hellip;..</p>
+<h2 id="keempat--readiness--liveness-probe">Keempat | Readiness &amp; Liveness Probe</h2>
+<p>Dalam menjalankan pod kita butuh untuk mengetahui pod tersebut sudah bisa diakses atau belum, lebih dari itu meskipun pod sudah bisa diakses namun pada kondisi tertentu pod gagal untuk memproses service padahal secara status masih running.
+Oleh karena itu kita membutuhkan yang namanya Readiness &amp; Liveness, yang berfungsi:</p>
+<ul>
+<li>mengetahui pod sudah siap untuk diakses atau belum</li>
+<li>mengetahui jika pod tidak bisa diakses pada waktu tertentu ketika pod sudah berjalan</li>
+</ul>
+<p>dari kegunaan tersebut pod yang tidak bisa diakses akan otomatis recreate(dibuat ulang) sesuai dengan parameter yang kita tentukan.</p>
+<p>Link terkait <a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/">Readiness &amp; Liveness</a></p>
+<h2 id="kelima--rolling-update-optionalimprovement">Kelima | Rolling Update (Optional&amp;improvement)</h2>
+<p>Pada dasarnya untuk metode deployment rolling update sudah ada secara default. Namun sebelum itu kita perlu paham terlebih dahulu apa itu maxSurge dan maxUnavailable. maxSurge berfungsi untuk mengatur berapa banyak pod yang akan kita tambahkan ketika terjadi update. maxUnavailable berfungsi untuk mengatur berapa banyak pod yang akan dihilangkan ketika proses rolling update.</p>
+<p>Masing-masing antara maxSurge dan maxUnavailable bisa diatur menggunakan persentase maupun jumlah pod.</p>
+<p>Link terkait <a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-update-deployment">Rolling Update (maxSurge &amp; max unavailable)</a></p>
 
                 </section>
             </article>
