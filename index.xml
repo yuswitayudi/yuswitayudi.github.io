@@ -6,10 +6,30 @@
     <description>Recent content on AWNESIA | SCBA (Sekedar Catatan Biasa Aja)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Sep 2022 10:05:59 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 26 Sep 2022 10:20:10 +0700</lastBuildDate>
     
 	<atom:link href="https://yuswitayudi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tags</title>
+      <link>https://yuswitayudi.github.io/tags/</link>
+      <pubDate>Mon, 26 Sep 2022 11:34:41 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/tags/</guid>
+      <description>Kumpulan Tags</description>
+    </item>
+    
+    <item>
+      <title>Membuat RBAC(Role Based Access Control) user pada kubernetes</title>
+      <link>https://yuswitayudi.github.io/posts/rbac-untuk-user/</link>
+      <pubDate>Mon, 26 Sep 2022 10:20:10 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/posts/rbac-untuk-user/</guid>
+      <description>Saya berharap untuk yang membaca ini berarti sedikit banyak sudah mengetahui tentang kubernetes (k8s), apabila belum tahu yaaa nggak papa juga sih. :D
+Utuk kali ini yang ingin saya tulis tentang RBAC adalah:
+ cara membuat user untuk mengakses kubernetes membuat role untuk user membuat rolebinding untuk user membatasi user untuk mengakses namespace tertentu  Pertama | Membuat user kubernetes Pada dasarnya ketika kita setup sebuah cluster kubernetes ada beberapa cara untuk mengakses cluster menggunakan kubectl, salah satunya menggunakan certificates/ssl.</description>
+    </item>
     
     <item>
       <title>Hal-hal yang perlu diperhatikan untuk menerapkan Zero Downtime pada k8s</title>
