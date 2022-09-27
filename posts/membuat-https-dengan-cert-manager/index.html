@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		
+		<meta name="generator" content="Hugo 0.74.3" />
+		<title>Membuat Domain pada Kubernetes menjadi HTTPS menggunakan cert-manager &middot; AWNESIA | SCBA (Sekedar Catatan Biasa Aja)</title>
+		<link rel="shortcut icon" href="https://yuswitayudi.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://yuswitayudi.github.io/css/style.css">
+		<link rel="stylesheet" href="https://yuswitayudi.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://yuswitayudi.github.io/css/monosocialiconsfont.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://yuswitayudi.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://yuswitayudi.github.io/posts'>Archive</a>
+	<a href='https://yuswitayudi.github.io/tags'>Tags</a>
+	<a href='https://yuswitayudi.github.io/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Membuat Domain pada Kubernetes menjadi HTTPS menggunakan cert-manager
+                    </h1>
+                    <h2 class="headline">
+                    Sep 27, 2022 11:23
+                    · 494 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://yuswitayudi.github.io/tags/kubernetes">kubernetes</a>
+                          
+                              <a href="https://yuswitayudi.github.io/tags/https">https</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p>Nahhh</p>
+<p>Kali ini catatan yang menurut saya agak banyak langkah, tanpa basa basi please welcome <code>Membuat Domain pada Kubernetes menjadi HTTPS menggunakan cert-manager</code>. Ada 2 bagian yang perlu diperhatikan</p>
+<ol>
+<li>ingress</li>
+<li>cert-manager</li>
+</ol>
+<h2 id="ingress">Ingress</h2>
+<p>Pertama kita perlu menginstall ingress pada cluster k8s terlebih dahulu, untuk metode installnya bisa menggunakan helm atau jika kita menggunakan digitalocean bisa menggunakan fitur Install Kubernetes 1-Click Apps.
+Install ingress melalui helm:</p>
+<pre><code>helm upgrade --install ingress-nginx ingress-nginx \
+  --repo https://kubernetes.github.io/ingress-nginx \
+  --namespace ingress-nginx --create-namespace
+</code></pre><h2 id="cert-manager">Cert-Manager</h2>
+<p>Sama halnya dengan Ingress jika kita menggunakan DO bisa menginstall melalui Install Kubernetes 1-Click Apps. Jika menginstall melalui helm berikut perintahnya</p>
+<pre><code>helm repo add jetstack https://charts.jetstack.io
+helm repo update
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.9.1/cert-manager.crds.yaml
+helm install \
+  cert-manager jetstack/cert-manager \
+  --namespace cert-manager \
+  --create-namespace \
+  --version v1.9.1 \
+  # --set installCRDs=true
+</code></pre><p>Oke, setelah ingress dan cert-manager telah terinstall. Coba untuk membuat ingress tanpa https sesuai dengan service yang sudah terdeploy.
+Contoh ingress yaml:</p>
+<pre><code>apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: RELEASE-NAME-demo
+  labels:
+    helm.sh/chart: demo-0.1.0
+    app.kubernetes.io/name: demo
+    app.kubernetes.io/instance: RELEASE-NAME
+    app.kubernetes.io/version: &quot;0.28.0&quot;
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - host: &quot;k8s-backend.demo.id&quot;
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: RELEASE-NAME-demo
+                port:
+                  number: 80
+</code></pre><p>Pastikan sudah bisa mengakses domain yang sudah dibuat melalui ingress, contoh hasil ingress sudah terbuat semacam ini:</p>
+<pre><code>NAMESPACE   NAME          CLASS    HOSTS                   ADDRESS        PORTS     AGE
+default     demo          nginx    k8s-backend.demo.id    167.x.x.x       80        21h
+</code></pre><h2 id="issuer">Issuer</h2>
+<p>Berfungsi untuk request dan genarate TLS yang valid untuk ingress yang sedang digunakan, dalam hal ini yaitu ingress-nginx. Berikut contoh file yaml issuer untuk staging:</p>
+<pre><code>apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+ name: letsencrypt-staging
+ namespace: cert-manager
+spec:
+ acme:
+   # The ACME server URL
+   server: https://acme-staging-v02.api.letsencrypt.org/directory
+   # Email address used for ACME registration
+   email: yudi@mail.com
+   # Name of a secret used to store the ACME account private key
+   privateKeySecretRef:
+     name: letsencrypt-staging
+   # Enable the HTTP-01 challenge provider
+   solvers:
+   - http01:
+       ingress:
+         class:  nginx
+</code></pre><p>Apply file yaml tersebut, untuk mengecek apakah sudah terpasang bisa menggunakan perintah <code>kubectl get clusterissuers.cert-manager.io</code>. Buat juga file yaml untuk production</p>
+<pre><code>apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+  namespace: cert-manager
+spec:
+  acme:
+    # The ACME server URL
+    server: https://acme-v02.api.letsencrypt.org/directory
+    # Email address used for ACME registration
+    email: yudi@mail.com
+    # Name of a secret used to store the ACME account private key
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    # Enable the HTTP-01 challenge provider
+    solvers:
+    - http01:
+        ingress:
+          class: nginx
+</code></pre><p>Setelah kedua file yaml tersebut terpasang, tambahkan pada file ingress yang tadi sudah dibuat sehingga menjadi seperti ini
+ingress-https.yaml</p>
+<pre><code>apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: RELEASE-NAME-demo
+  labels:
+    helm.sh/chart: demo-0.1.0
+    app.kubernetes.io/name: demo
+    app.kubernetes.io/instance: RELEASE-NAME
+    app.kubernetes.io/version: &quot;0.28.0&quot;
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-staging
+spec:
+  tls:
+    - hosts:
+        - &quot;k8s-backend.demo.id&quot;
+      secretName: demo-tls
+  rules:
+    - host: &quot;k8s-backend.demo.id&quot;
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: RELEASE-NAME-demo
+                port:
+                  number: 80
+</code></pre><p>Agar generate ssl aman dan untuk menghindari limit request kita menggunakan cluster-issuer staging terlebih dahulu. Jika sudah dirasa aman dan log pada pod cert-manager tidak ada masalah, baru pindah ke letsencrypt yang prod.</p>
+<p>Jika tidak nampak error harusnya sudah bisa berjalan dan https sudah terinstall pada domain kita. yuhuuuu</p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2022 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://yuswitayudi.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://yuswitayudi.github.io/js/main.js"></script>
+<script src="https://yuswitayudi.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>
