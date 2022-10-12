@@ -6,10 +6,19 @@
     <description>Recent content in kubernetes on AWNESIA | SCBA (Sekedar Catatan Biasa Aja)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Sep 2022 11:23:19 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 12 Oct 2022 17:25:04 +0700</lastBuildDate>
     
 	<atom:link href="https://yuswitayudi.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Perbedaan Stateless dan Statefull pada Kubernetes</title>
+      <link>https://yuswitayudi.github.io/posts/statefuld-stateless/</link>
+      <pubDate>Wed, 12 Oct 2022 17:25:04 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/posts/statefuld-stateless/</guid>
+      <description>Upcoming perbedaan antara statefull dan stateless, staytune&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..</description>
+    </item>
     
     <item>
       <title>Membuat Domain pada Kubernetes menjadi HTTPS menggunakan cert-manager</title>

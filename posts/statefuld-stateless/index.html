@@ -8,7 +8,7 @@
 		
 		
 		<meta name="generator" content="Hugo 0.74.3" />
-		<title>Membuat RBAC(Role Based Access Control) user pada kubernetes &middot; AWNESIA | SCBA (Sekedar Catatan Biasa Aja)</title>
+		<title>Perbedaan Stateless dan Statefull pada Kubernetes &middot; AWNESIA | SCBA (Sekedar Catatan Biasa Aja)</title>
 		<link rel="shortcut icon" href="https://yuswitayudi.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://yuswitayudi.github.io/css/style.css">
 		<link rel="stylesheet" href="https://yuswitayudi.github.io/css/highlight.css">
@@ -42,11 +42,11 @@
             <article>
                 <header>
                     <h1>
-                        Membuat RBAC(Role Based Access Control) user pada kubernetes
+                        Perbedaan Stateless dan Statefull pada Kubernetes
                     </h1>
                     <h2 class="headline">
-                    Sep 26, 2022 10:20
-                    · 135 words
+                    Oct 12, 2022 17:25
+                    · 7 words
                     · 1 minute read
                       <span class="tags">
                       
@@ -61,21 +61,7 @@
                 </header>
                 
                 <section id="post-body">
-                    <p>Saya berharap untuk yang membaca ini berarti sedikit banyak sudah mengetahui tentang kubernetes (k8s), apabila belum tahu yaaa nggak papa juga sih. :D</p>
-<p>Utuk kali ini yang ingin saya tulis tentang RBAC adalah:</p>
-<ul>
-<li>cara membuat user untuk mengakses kubernetes</li>
-<li>membuat role untuk user</li>
-<li>membuat rolebinding untuk user</li>
-<li>membatasi user untuk mengakses namespace tertentu</li>
-</ul>
-<h2 id="pertama--membuat-user-kubernetes">Pertama | Membuat user kubernetes</h2>
-<p>Pada dasarnya ketika kita setup sebuah cluster kubernetes ada beberapa cara untuk mengakses cluster menggunakan kubectl, salah satunya menggunakan certificates/ssl. Nah untuk kali ini kita membuat user yang menggunakan certificate. Langkah pertama adalah generate rsa, supaya menggampangkan gambaran untuk kali ini nama usernya adalah <code>yudi</code> jadi sesuaikan jika akan diubah.</p>
-<p>Buat private key untuk user yudi (yudi.key)</p>
-<pre><code>openssl genrsa -out yudi.key 2048
-</code></pre><p>Buat certificate signing request (yudi.csr)</p>
-<pre><code>openssl req -new -key yudi.key -out yudi.csr -subj &quot;/CN=$i/O=finance&quot;
-</code></pre><p><a href="https://gist.github.com/yuswitayudi/98eaeb2b9a6077868bc96159a2d998f6">https://gist.github.com/yuswitayudi/98eaeb2b9a6077868bc96159a2d998f6</a></p>
+                    <p>Upcoming perbedaan antara statefull dan stateless, staytune&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..</p>
 
                 </section>
             </article>
