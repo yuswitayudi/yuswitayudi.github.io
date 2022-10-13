@@ -46,7 +46,7 @@
                     </h1>
                     <h2 class="headline">
                     Oct 12, 2022 17:25
-                    · 303 words
+                    · 322 words
                     · 2 minute read
                       <span class="tags">
                       
@@ -136,6 +136,7 @@ Mengapa perlu ada catatan ini? ya karena memang saya bingung dan harus mencari t
 <li>jika scale up pod maka pod yang baru akan clone dari previous pod, bukan dari sembarang pod</li>
 <li>baiknya ketika menggunakan statefullset dengan persistence volume yang tipenya remote storage, karena sewaktu waktu pod dibuat ulang di node yang berbeda masik bisa mengakses persistent volume</li>
 <li>masing masing pod memiliki service sendiri</li>
+<li>selalu akan membuat service headless yang digunakan untuk koneksi antar worker pod untuk data tetap pada state yg uptodate</li>
 </ul>
 
                 </section>
