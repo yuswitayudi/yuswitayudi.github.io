@@ -46,8 +46,8 @@
                     </h1>
                     <h2 class="headline">
                     Oct 12, 2022 17:25
-                    · 7 words
-                    · 1 minute read
+                    · 303 words
+                    · 2 minute read
                       <span class="tags">
                       
                       
@@ -61,7 +61,82 @@
                 </header>
                 
                 <section id="post-body">
-                    <p>Upcoming perbedaan antara statefull dan stateless, staytune&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..</p>
+                    <p>Nahhh
+Mengapa perlu ada catatan ini? ya karena memang saya bingung dan harus mencari tahu sendiri apa berbedaanya. Kan nggak lucu dong hanya karena sering melihat tapi tidak tahu persis apa konsep yang sebenarnya terjadi. wkkkk</p>
+<p>Sebelum mengetahui perbedaan Stateless dan Statefullset pada kubernetes, urutan yang perlu kita pahami adalah mengetahui aplikasi stateless dan statefull terlebih dahulu, dan ini perbedaanya teng tenggg</p>
+<table>
+<thead>
+<tr>
+<th>Aplikasi Stateless</th>
+<th>Aplikasi Statefull</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Digunakan untuk request baru. Ex: Aplikasi backend dari nodejs</td>
+<td>Digunakan untuk menyimpan data. Ex: mysql</td>
+</tr>
+<tr>
+<td>Tidak menyimpanpan state sebelumnya</td>
+<td>Menyimpan state sebelumnya</td>
+</tr>
+<tr>
+<td>Deploy di kubernetes mengunakan mode deployment</td>
+<td>Deploy di kubernetes menggunakan mode statefullset</td>
+</tr>
+</tbody>
+</table>
+<p>Setelah mengetahui perbadaan basic dari masing-masing aplikasi tersebut, harusnya sudah ada gambaran lah ya.</p>
+<p>Perbedaan Stateless dan Statefullset pada kubernetes</p>
+<table>
+<thead>
+<tr>
+<th>Stateless</th>
+<th>StatefullSet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identical and Interchangable</td>
+<td>Not identical</td>
+</tr>
+<tr>
+<td>Pod yang dibuat waktunya acak dan menggunakan random hash</td>
+<td>Memiliki fix ordered name</td>
+</tr>
+<tr>
+<td>Pod bisa dihapus/dibuat pada waktu yang bersamaan</td>
+<td>Pod tidak bisa dihapus/dibuat pada waktu bersamaan</td>
+</tr>
+<tr>
+<td>Deploy menggunakan Deployment</td>
+<td>Deploy menggunakan Statefullset</td>
+</tr>
+<tr>
+<td>Persistent volume tidak bisa digunakan oleh pod lain ketika recreate</td>
+<td>Persistent volume bisa digunakan oleh pod lain ketika recreate</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Catatan didalam catatan</strong></p>
+<ul>
+<li>stateful kurang cocok untuk containerization</li>
+</ul>
+<p>statefull</p>
+<ul>
+<li>memiliki fix oredered name</li>
+<li>pod tidak akan dibuat ketika previous pod belum selesai</li>
+<li>can&rsquo;t be created/deleted at same time</li>
+<li>can&rsquo;t be randomly addressed</li>
+<li>replica pods are not identical</li>
+<li>pod yang dinyalakan akan tetap sama idnya meskipun baru/sudah dihapus</li>
+<li>akan ada namanya master slave pada pod, karena jika semua pod dapat RW(Read and Write) maka akan terjadi inconsistency data</li>
+<li>storage masing&rdquo; pod akan berbeda</li>
+<li>akan continously sync</li>
+<li>jika scale up pod maka pod yang baru akan clone dari previous pod, bukan dari sembarang pod</li>
+<li>baiknya ketika menggunakan statefullset dengan persistence volume yang tipenya remote storage, karena sewaktu waktu pod dibuat ulang di node yang berbeda masik bisa mengakses persistent volume</li>
+<li>masing masing pod memiliki service sendiri</li>
+</ul>
 
                 </section>
             </article>

@@ -17,7 +17,9 @@
       <pubDate>Wed, 12 Oct 2022 17:25:04 +0700</pubDate>
       
       <guid>https://yuswitayudi.github.io/posts/statefuld-stateless/</guid>
-      <description>Upcoming perbedaan antara statefull dan stateless, staytune&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..</description>
+      <description>Nahhh Mengapa perlu ada catatan ini? ya karena memang saya bingung dan harus mencari tahu sendiri apa berbedaanya. Kan nggak lucu dong hanya karena sering melihat tapi tidak tahu persis apa konsep yang sebenarnya terjadi. wkkkk
+Sebelum mengetahui perbedaan Stateless dan Statefullset pada kubernetes, urutan yang perlu kita pahami adalah mengetahui aplikasi stateless dan statefull terlebih dahulu, dan ini perbedaanya teng tenggg
+   Aplikasi Stateless Aplikasi Statefull     Digunakan untuk request baru.</description>
     </item>
     
     <item>
