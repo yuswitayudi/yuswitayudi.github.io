@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		
+		<meta name="generator" content="Hugo 0.74.3" />
+		<title>Cara Menjalankan Python File Menggunakan Gunicorn &middot; AWNESIA | SCBA (Sekedar Catatan Biasa Aja)</title>
+		<link rel="shortcut icon" href="https://yuswitayudi.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://yuswitayudi.github.io/css/style.css">
+		<link rel="stylesheet" href="https://yuswitayudi.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://yuswitayudi.github.io/css/monosocialiconsfont.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://yuswitayudi.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://yuswitayudi.github.io/posts'>Archive</a>
+	<a href='https://yuswitayudi.github.io/tags'>Tags</a>
+	<a href='https://yuswitayudi.github.io/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Cara Menjalankan Python File Menggunakan Gunicorn
+                    </h1>
+                    <h2 class="headline">
+                    Oct 17, 2022 11:27
+                    · 97 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://yuswitayudi.github.io/tags/python">python</a>
+                          
+                              <a href="https://yuswitayudi.github.io/tags/deployment">deployment</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p>Ini adalah cara menjalankan file python menggunakan gunicorn. Pada contoh ini misal kita memilik api server dari file python dengan nama <code>api_flask.py</code></p>
+<p>Maka cara menjalankannya adalah seperti ini:</p>
+<pre><code>gunicorn --bind 0.0.0.0:5000 api_flask:app -w 2 --log-config logging.ini --access-logfile -
+</code></pre><p><strong>keterangan:</strong></p>
+<p>api_flask = nama file python yg akan dijalankan. nama asli <code>api_flask.py</code></p>
+<p>-w = workers yang akan dijalankan.</p>
+<p>-—log-config = file log config yang akan digunakan untuk logging gunicorn.</p>
+<p>contoh log file gunicorn.</p>
+<p><strong>logging.ini</strong></p>
+<pre><code>[loggers]
+keys=root
+
+[handlers]
+keys=consoleHandler
+
+[formatters]
+keys=simpleFormatter
+
+[logger_root]
+level=DEBUG
+handlers=consoleHandler
+
+[handler_consoleHandler]
+class=StreamHandler
+level=DEBUG
+formatter=simpleFormatter
+args=(sys.stdout,)
+
+[formatter_simpleFormatter]
+format=[%(asctime)s] [%(process)d] [%(levelname)s] - %(module)s - %(message)s
+datefmt=%Y-%m-%d %H:%M:%S %z
+</code></pre>
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2022 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://yuswitayudi.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://yuswitayudi.github.io/js/main.js"></script>
+<script src="https://yuswitayudi.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>
