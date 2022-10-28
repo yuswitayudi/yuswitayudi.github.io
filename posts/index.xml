@@ -6,10 +6,22 @@
     <description>Recent content in Posts on AWNESIA | SCBA (Sekedar Catatan Biasa Aja)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Oct 2022 11:27:29 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 28 Oct 2022 17:02:51 +0700</lastBuildDate>
     
 	<atom:link href="https://yuswitayudi.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)</title>
+      <link>https://yuswitayudi.github.io/posts/nginx-error/</link>
+      <pubDate>Fri, 28 Oct 2022 17:02:51 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/posts/nginx-error/</guid>
+      <description>Untuk mengatasi error nginx seperti dibawah ini
+nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+Jalankan perintah berikut
+sudo fuser -k 80/tcp service nginx start Semoga aman servermu :))</description>
+    </item>
     
     <item>
       <title>Cara Menjalankan Python File Menggunakan Gunicorn</title>
