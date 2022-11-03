@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		
+		<meta name="generator" content="Hugo 0.74.3" />
+		<title>Generate SSL from DNS challanges with certbot &middot; AWNESIA | SCBA (Sekedar Catatan Biasa Aja)</title>
+		<link rel="shortcut icon" href="https://yuswitayudi.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://yuswitayudi.github.io/css/style.css">
+		<link rel="stylesheet" href="https://yuswitayudi.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://yuswitayudi.github.io/css/monosocialiconsfont.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://yuswitayudi.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://yuswitayudi.github.io/posts'>Archive</a>
+	<a href='https://yuswitayudi.github.io/tags'>Tags</a>
+	<a href='https://yuswitayudi.github.io/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Generate SSL from DNS challanges with certbot
+                    </h1>
+                    <h2 class="headline">
+                    Nov 3, 2022 09:32
+                    · 448 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://yuswitayudi.github.io/tags/ssl">ssl</a>
+                          
+                              <a href="https://yuswitayudi.github.io/tags/nginx">nginx</a>
+                          
+                              <a href="https://yuswitayudi.github.io/tags/certbot">certbot</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p>In this <a href="https://yuswitayudi.github.io">notes</a> I will write on English, I just learn and get used to English.</p>
+<p>First thing first this my <a href="https://yuswitayudi.github.io">notes</a> with <strong>Cloudflare</strong> domain management.</p>
+<p>Let&rsquo;s start, I have problem to generate ssl on local network. Because local network don&rsquo;t have public IP to be called from certbot, to authenticate that domain is valid.</p>
+<p>So from <a href="https://linggar.asia/">my boss</a> I have knowledge to solve the problem with generate certificate from certbot with authenticate challange with DNS.</p>
+<h2 id="the-command-is-particulary-like-this">The command is particulary like this</h2>
+<pre><code>sudo certbot certonly --manual --preferred-challenges=dns --manual-auth-hook /path_to_execute/authenticator.sh --manual-cleanup-hook /path_to_execute/cleanup.sh -d domain_name
+</code></pre><p>Description:</p>
+<ul>
+<li><strong>certonly</strong> : Obtain or renew a certificate, but do not install it</li>
+<li><strong>&ndash;prefered-challenges</strong> : A sorted, comma delimited list of the preferred challenge to use during authorization with the most preferred challenge listed first (Eg, &ldquo;dns&rdquo; or &ldquo;http,dns&rdquo;).</li>
+<li><strong>&ndash;manual-auth-hook</strong> : script will be run before generate ssl</li>
+<li><strong>&ndash;manual-cleanup-hook</strong> : script will be run after generate ssl</li>
+<li><strong>-d</strong> : domain name which generate certificates</li>
+</ul>
+<p>Based on above command we know that exist script to execute, and here it is</p>
+<p>to generate dns with <code>authenticator.sh</code></p>
+<pre><code>#!/bin/bash
+
+# Get your API key from https://www.cloudflare.com/a/account/my-account
+API_KEY=&quot;api_token_cloudflare&quot;
+EMAIL=&quot;your_email&quot;
+
+# Strip only the top domain to get the zone id
+DOMAIN=$(expr match &quot;$CERTBOT_DOMAIN&quot; '.*\.\(.*\..*\)')
+
+# Get the Cloudflare zone id
+ZONE_EXTRA_PARAMS=&quot;status=active&amp;page=1&amp;per_page=20&amp;order=status&amp;direction=desc&amp;match=all&quot;
+ZONE_ID=$(curl -s -X GET &quot;https://api.cloudflare.com/client/v4/zones?name=$DOMAIN&amp;$ZONE_EXTRA_PARAMS&quot; \
+     -H     &quot;X-Auth-Email: $EMAIL&quot; \
+     -H     &quot;X-Auth-Key: $API_KEY&quot; \
+     -H     &quot;Content-Type: application/json&quot; | python -c &quot;import sys,json;print(json.load(sys.stdin)['result'][0]['id'])&quot;)
+
+# Create TXT record
+CREATE_DOMAIN=&quot;_acme-challenge.$CERTBOT_DOMAIN&quot;
+RECORD_ID=$(curl -s -X POST &quot;https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records&quot; \
+     -H     &quot;X-Auth-Email: $EMAIL&quot; \
+     -H     &quot;X-Auth-Key: $API_KEY&quot; \
+     -H     &quot;Content-Type: application/json&quot; \
+     --data '{&quot;type&quot;:&quot;TXT&quot;,&quot;name&quot;:&quot;'&quot;$CREATE_DOMAIN&quot;'&quot;,&quot;content&quot;:&quot;'&quot;$CERTBOT_VALIDATION&quot;'&quot;,&quot;ttl&quot;:120}' \
+             | python -c &quot;import sys,json;print(json.load(sys.stdin)['result']['id'])&quot;)
+# Save info for cleanup
+if [ ! -d /tmp/CERTBOT_$CERTBOT_DOMAIN ];then
+        mkdir -m 0700 /tmp/CERTBOT_$CERTBOT_DOMAIN
+fi
+echo $ZONE_ID &gt; /tmp/CERTBOT_$CERTBOT_DOMAIN/ZONE_ID
+echo $RECORD_ID &gt; /tmp/CERTBOT_$CERTBOT_DOMAIN/RECORD_ID
+
+# Sleep to make sure the change has time to propagate over to DNS
+sleep 25
+
+</code></pre><p>to clean dns already generated with <code>cleanup.sh</code></p>
+<pre><code>#!/bin/bash
+
+# Get your API key from https://www.cloudflare.com/a/account/my-account
+API_KEY=&quot;api_toke_cloudflare&quot;
+EMAIL=&quot;your_email&quot;
+
+if [ -f /tmp/CERTBOT_$CERTBOT_DOMAIN/ZONE_ID ]; then
+        ZONE_ID=$(cat /tmp/CERTBOT_$CERTBOT_DOMAIN/ZONE_ID)
+        rm -f /tmp/CERTBOT_$CERTBOT_DOMAIN/ZONE_ID
+fi
+
+if [ -f /tmp/CERTBOT_$CERTBOT_DOMAIN/RECORD_ID ]; then
+        RECORD_ID=$(cat /tmp/CERTBOT_$CERTBOT_DOMAIN/RECORD_ID)
+        rm -f /tmp/CERTBOT_$CERTBOT_DOMAIN/RECORD_ID
+fi
+
+# Remove the challenge TXT record from the zone
+if [ -n &quot;${ZONE_ID}&quot; ]; then
+    if [ -n &quot;${RECORD_ID}&quot; ]; then
+        curl -s -X DELETE &quot;https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records/$RECORD_ID&quot; \
+                -H &quot;X-Auth-Email: $EMAIL&quot; \
+                -H &quot;X-Auth-Key: $API_KEY&quot; \
+                -H &quot;Content-Type: application/json&quot;
+    fi
+fi
+</code></pre><p>When you already done with execute the <a href="#the-command-is-particulary-like-this">command</a>, you must already have certificates at <code>/etc/letsencrypt/live/domain_name/</code> and just add the certificates to your nginx config.</p>
+<p>Example like this</p>
+<pre><code>server {
+....................
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/your_domain_name/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/your_domain_name/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+
+</code></pre><p><strong>taraaaa</strong></p>
+<p>reference: <a href="https://eff-certbot.readthedocs.io/en/stable/using.html#pre-and-post-validation-hooks">https://eff-certbot.readthedocs.io/en/stable/using.html#pre-and-post-validation-hooks</a></p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2022 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://yuswitayudi.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://yuswitayudi.github.io/js/main.js"></script>
+<script src="https://yuswitayudi.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>
