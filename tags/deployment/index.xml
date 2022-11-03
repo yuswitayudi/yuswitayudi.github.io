@@ -17,13 +17,13 @@
       <pubDate>Mon, 17 Oct 2022 11:27:29 +0700</pubDate>
       
       <guid>https://yuswitayudi.github.io/posts/cara-run-python-gunicorn/</guid>
-      <description>Ini adalah cara menjalankan file python menggunakan gunicorn. Pada contoh ini misal kita memilik api server dari file python dengan nama api_flask.py
+      <description>entah kenapa saya nyari gambar di freepik kebanyakan muncul itu, yaudahlahyaaa.
+Ini adalah cara menjalankan file python menggunakan gunicorn. Pada contoh ini misal kita memilik api server dari file python dengan nama api_flask.py
 Maka cara menjalankannya adalah seperti ini:
 gunicorn --bind 0.0.0.0:5000 api_flask:app -w 2 --log-config logging.ini --access-logfile - keterangan:
 api_flask = nama file python yg akan dijalankan. nama asli api_flask.py
 -w = workers yang akan dijalankan.
--—log-config = file log config yang akan digunakan untuk logging gunicorn.
-contoh log file gunicorn.</description>
+-—log-config = file log config yang akan digunakan untuk logging gunicorn.</description>
     </item>
     
   </channel>

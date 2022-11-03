@@ -46,7 +46,7 @@
                     </h1>
                     <h2 class="headline">
                     Oct 17, 2022 11:27
-                    · 97 words
+                    · 108 words
                     · 1 minute read
                       <span class="tags">
                       
@@ -63,7 +63,9 @@
                 </header>
                 
                 <section id="post-body">
-                    <p>Ini adalah cara menjalankan file python menggunakan gunicorn. Pada contoh ini misal kita memilik api server dari file python dengan nama <code>api_flask.py</code></p>
+                    <p><img src="https://img.freepik.com/free-photo/marabou-stork-bird-closeup-head-with-natural-background_488145-1161.jpg?w=1380&amp;t=st=1667445952~exp=1667446552~hmac=fad6ae320097c71e87b13dfb720e25a7f3a34c8a2d52de2a5ac1b3ebfd2bee72" alt="gunicorn"></p>
+<p>entah kenapa saya nyari gambar di freepik kebanyakan muncul itu, yaudahlahyaaa.</p>
+<p>Ini adalah cara menjalankan file python menggunakan gunicorn. Pada contoh ini misal kita memilik api server dari file python dengan nama <code>api_flask.py</code></p>
 <p>Maka cara menjalankannya adalah seperti ini:</p>
 <pre><code>gunicorn --bind 0.0.0.0:5000 api_flask:app -w 2 --log-config logging.ini --access-logfile -
 </code></pre><p><strong>keterangan:</strong></p>
