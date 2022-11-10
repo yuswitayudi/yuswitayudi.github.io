@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on AWNESIA | SCBA (Sekedar Catatan Biasa Aja)</title>
+    <link>https://yuswitayudi.github.io/tags/docker/</link>
+    <description>Recent content in docker on AWNESIA | SCBA (Sekedar Catatan Biasa Aja)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Nov 2022 15:39:17 +0700</lastBuildDate>
+    
+	<atom:link href="https://yuswitayudi.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Change Subnet IP on OpenVPN Docker</title>
+      <link>https://yuswitayudi.github.io/posts/change-subnet/</link>
+      <pubDate>Thu, 10 Nov 2022 15:39:17 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/posts/change-subnet/</guid>
+      <description>In another case we already setup openvpn with docker, and we want to change IP Address of vpn network. How we do it? But if you interest how to setup openvpn you just only visit this github repo
+In my case I already setup IP on 192.168.x.x but at one time we use that IP on wifi/router local. So that IP not work to access. To generate new IP we must generate new openvpn.</description>
+    </item>
+    
+  </channel>
+</rss>

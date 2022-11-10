@@ -6,10 +6,28 @@
     <description>Recent content in Tags on AWNESIA | SCBA (Sekedar Catatan Biasa Aja)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Nov 2022 09:32:15 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 10 Nov 2022 15:39:17 +0700</lastBuildDate>
     
 	<atom:link href="https://yuswitayudi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>docker</title>
+      <link>https://yuswitayudi.github.io/tags/docker/</link>
+      <pubDate>Thu, 10 Nov 2022 15:39:17 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VPN</title>
+      <link>https://yuswitayudi.github.io/tags/vpn/</link>
+      <pubDate>Thu, 10 Nov 2022 15:39:17 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/tags/vpn/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>certbot</title>

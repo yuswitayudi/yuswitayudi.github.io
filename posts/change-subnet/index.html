@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		
+		<meta name="generator" content="Hugo 0.74.3" />
+		<title>Change Subnet IP on OpenVPN Docker &middot; AWNESIA | SCBA (Sekedar Catatan Biasa Aja)</title>
+		<link rel="shortcut icon" href="https://yuswitayudi.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://yuswitayudi.github.io/css/style.css">
+		<link rel="stylesheet" href="https://yuswitayudi.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://yuswitayudi.github.io/css/monosocialiconsfont.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://yuswitayudi.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://yuswitayudi.github.io/posts'>Archive</a>
+	<a href='https://yuswitayudi.github.io/tags'>Tags</a>
+	<a href='https://yuswitayudi.github.io/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Change Subnet IP on OpenVPN Docker
+                    </h1>
+                    <h2 class="headline">
+                    Nov 10, 2022 15:39
+                    · 106 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://yuswitayudi.github.io/tags/docker">docker</a>
+                          
+                              <a href="https://yuswitayudi.github.io/tags/vpn">VPN</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p><img src="https://img.freepik.com/free-photo/walls-apartment-is-construction-remodeling-renovation-extension-restoration-reconstruction_493343-29444.jpg?w=1380&amp;t=st=1668069749~exp=1668070349~hmac=554ede8dc03392689097aa21dd2e62624e30956a0bd2b8a771fbbd6733eef658" alt="openvpn"></p>
+<p>In another case we already setup openvpn with docker, and we want to change IP Address of vpn network. How we do it? But if you interest how to setup openvpn you just only visit this <a href="https://github.com/kylemanna/docker-openvpn">github repo</a></p>
+<p>In my case I already setup IP on 192.168.x.x but at one time we use that IP on wifi/router local. So that IP not work to access. To generate new IP we must generate new <strong>openvpn.conf</strong> and specify the IP Address</p>
+<p>Just run this command:</p>
+<pre><code>docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_genconfig -u udp://VPN.SERVERNAME.COM -s 10.10.0.0/24
+</code></pre><p>After this you must restart docker container to apply new openvpn.conf.</p>
+<p>Taraa</p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2022 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://yuswitayudi.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://yuswitayudi.github.io/js/main.js"></script>
+<script src="https://yuswitayudi.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>
