@@ -4,7 +4,32 @@
   
   <url>
     <loc>https://yuswitayudi.github.io/</loc>
-    <lastmod>2022-11-10T15:39:17+07:00</lastmod>
+    <lastmod>2022-11-14T13:16:46+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yuswitayudi.github.io/posts/terraform-digitalocean/</loc>
+    <lastmod>2022-11-14T13:16:46+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yuswitayudi.github.io/posts/</loc>
+    <lastmod>2022-11-14T13:16:46+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yuswitayudi.github.io/tags/server/</loc>
+    <lastmod>2022-11-14T13:16:46+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yuswitayudi.github.io/tags/</loc>
+    <lastmod>2022-11-14T13:16:46+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yuswitayudi.github.io/tags/terraform/</loc>
+    <lastmod>2022-11-14T13:16:46+07:00</lastmod>
   </url>
   
   <url>
@@ -14,16 +39,6 @@
   
   <url>
     <loc>https://yuswitayudi.github.io/tags/docker/</loc>
-    <lastmod>2022-11-10T15:39:17+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yuswitayudi.github.io/posts/</loc>
-    <lastmod>2022-11-10T15:39:17+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yuswitayudi.github.io/tags/</loc>
     <lastmod>2022-11-10T15:39:17+07:00</lastmod>
   </url>
   
@@ -125,6 +140,10 @@
   <url>
     <loc>https://yuswitayudi.github.io/posts/intro/</loc>
     <lastmod>2022-06-16T16:48:56+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yuswitayudi.github.io/categories/</loc>
   </url>
   
 </urlset>

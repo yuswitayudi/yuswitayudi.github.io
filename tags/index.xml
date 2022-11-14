@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Tags on AWNESIA | SCBA (Sekedar Catatan Biasa Aja)</title>
+    <title>Tags on AWNESIA</title>
     <link>https://yuswitayudi.github.io/tags/</link>
-    <description>Recent content in Tags on AWNESIA | SCBA (Sekedar Catatan Biasa Aja)</description>
+    <description>Recent content in Tags on AWNESIA</description>
+    <image>
+      <url>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 10 Nov 2022 15:39:17 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 14 Nov 2022 13:16:46 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>server</title>
+      <link>https://yuswitayudi.github.io/tags/server/</link>
+      <pubDate>Mon, 14 Nov 2022 13:16:46 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/tags/server/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="https://yuswitayudi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>terraform</title>
+      <link>https://yuswitayudi.github.io/tags/terraform/</link>
+      <pubDate>Mon, 14 Nov 2022 13:16:46 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/tags/terraform/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>docker</title>
