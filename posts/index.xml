@@ -9,7 +9,18 @@
       <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 14 Nov 2022 13:16:46 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Nov 2022 11:14:46 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Menggunakan Skaffold untuk Kemudahan Development</title>
+      <link>https://yuswitayudi.github.io/posts/skaffold-simple/</link>
+      <pubDate>Thu, 17 Nov 2022 11:14:46 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/posts/skaffold-simple/</guid>
+      <description>Nahh
+Kali ini saya menulis tentang skaffold, merupakan software development tool untuk membuat kinerja para developer yang melakukan repetitif menjadi mudah. Kenapa demikian? mari kita telisik dan telusuk.
+Pada umumnya seorang developer ketika mengerjakan suatu aplikasi, dia akan melakukan dan menjalankan di devicenya sendiri. Meskipun sudah menggunakan metode docker/container namun kadang masih terdapat perbedaan ketika sudah terdeploy pada server. Atau semisal ketika menjalankan sudah melakukan development pada kubernetes, pasti ada proses build image dan push ke registry dan hal tersebut sangat repetitif.</description>
+    </item>
+    
     <item>
       <title>Membuat Droplet pada DigitalOcean menggunakan Terraform</title>
       <link>https://yuswitayudi.github.io/posts/terraform-digitalocean/</link>
