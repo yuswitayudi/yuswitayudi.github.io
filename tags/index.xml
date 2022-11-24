@@ -9,7 +9,16 @@
       <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 22 Nov 2022 15:35:09 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Nov 2022 16:09:01 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker</title>
+      <link>https://yuswitayudi.github.io/tags/docker/</link>
+      <pubDate>Thu, 24 Nov 2022 16:09:01 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>deployment</title>
       <link>https://yuswitayudi.github.io/tags/deployment/</link>
@@ -61,15 +70,6 @@
       <pubDate>Mon, 14 Nov 2022 13:16:46 +0700</pubDate>
       
       <guid>https://yuswitayudi.github.io/tags/terraform/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>docker</title>
-      <link>https://yuswitayudi.github.io/tags/docker/</link>
-      <pubDate>Thu, 10 Nov 2022 15:39:17 +0700</pubDate>
-      
-      <guid>https://yuswitayudi.github.io/tags/docker/</guid>
       <description></description>
     </item>
     

@@ -9,7 +9,18 @@
       <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 22 Nov 2022 15:35:09 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Nov 2022 16:09:01 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mengganti Ukuran Log Docker Container</title>
+      <link>https://yuswitayudi.github.io/posts/mengganti-log-size/</link>
+      <pubDate>Thu, 24 Nov 2022 16:09:01 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/posts/mengganti-log-size/</guid>
+      <description>Ukuran log yang besar pasti suatu saat akan membuatmu mikir-mikir tentang disk kan. Nah untuk itu kita perlu mengatur berapa ukuran yang ada pada docker container. Ini dijalankan dengan docker-compose maupun docker container.
+Docker compose version: &#39;3&#39; services: nginx: image: nginx:latest hostname: ubuntu logging: options: tag: &amp;quot;{{.Name}}&amp;quot; max-size: 50m labels: - &amp;quot;autoheal=true&amp;quot; Docker container docker run -d --name nginx --log-opt max-size=50m
+Dari kedua cara diatas akan membatasi log ke ukuran 50 megabytes saja.</description>
+    </item>
+    
     <item>
       <title>Melakukan Deploy ketika ada Perubahan pada Folder Menggunakan GitLab CI</title>
       <link>https://yuswitayudi.github.io/posts/gitlab-ci-perubahan-folder/</link>
