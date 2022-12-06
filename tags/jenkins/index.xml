@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>CI/CD on AWNESIA</title>
-    <link>https://yuswitayudi.github.io/tags/ci/cd/</link>
-    <description>Recent content in CI/CD on AWNESIA</description>
+    <title>jenkins on AWNESIA</title>
+    <link>https://yuswitayudi.github.io/tags/jenkins/</link>
+    <description>Recent content in jenkins on AWNESIA</description>
     <image>
       <url>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://yuswitayudi.github.io/tags/ci/cd/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 06 Dec 2022 09:14:40 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Menghubungkan Slack dan Jenkins untuk mendapatkan notifikasi</title>
       <link>https://yuswitayudi.github.io/posts/jenkins-ci-slack/</link>
@@ -17,17 +18,6 @@
       <guid>https://yuswitayudi.github.io/posts/jenkins-ci-slack/</guid>
       <description>Jenkins merupakan salahsatu aplikasi CI/CD yang sering digunakan untuk deployment sebuah aplikasi di production. Karena kemudahan untuk customizable deployment bisa dengan declarative pipeline maupun freestyle pipeline. Oleh karena kemudahan dan manfaat yang besar tak khayal jenkins menjadi salah satu tool CI/CD favorit. (gilak sih mirip reporter)
 Dalam perkembangannya ketika kita menggunakan Jenkins untuk bisa mengetahui seluruh pipeline sudah selesai berjalan atau belum terkadang kita harus mengakses dashboard untuk mengetahui prosesnya. Sebenarnya ada plugin sendiri dari jenkins menyediakan notifikasi ke email ketika pipeline gagal selesai, namun tidak ada notifikasi kapan pipeline jalan dan selesai.</description>
-    </item>
-    
-    <item>
-      <title>Melakukan Deploy ketika ada Perubahan pada Folder Menggunakan GitLab CI</title>
-      <link>https://yuswitayudi.github.io/posts/gitlab-ci-perubahan-folder/</link>
-      <pubDate>Tue, 22 Nov 2022 15:35:09 +0700</pubDate>
-      
-      <guid>https://yuswitayudi.github.io/posts/gitlab-ci-perubahan-folder/</guid>
-      <description>Yakkk
-Again-again semua catatan yang telah tertulis di web ini murni dari sudut pandang sang penulis ya, jadi apabila ada perbedaan ya wajar dong.
-Oke langsung ke contoh kasus, biasanya untuk depoyment menggunakan metode gitfow akan ada proses trigering untuk melakukan suatu aksi ketika sudah merged ke salah satu branch. Contoh apabila ada merged ke branch staging, maka akan triggering ke webhook yang ada di jenkins untuk deployment pada service yang berada pada environment staging.</description>
     </item>
     
   </channel>

@@ -9,7 +9,17 @@
       <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 24 Nov 2022 16:09:01 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Dec 2022 09:14:40 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Menghubungkan Slack dan Jenkins untuk mendapatkan notifikasi</title>
+      <link>https://yuswitayudi.github.io/posts/jenkins-ci-slack/</link>
+      <pubDate>Tue, 06 Dec 2022 09:14:40 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/posts/jenkins-ci-slack/</guid>
+      <description>Jenkins merupakan salahsatu aplikasi CI/CD yang sering digunakan untuk deployment sebuah aplikasi di production. Karena kemudahan untuk customizable deployment bisa dengan declarative pipeline maupun freestyle pipeline. Oleh karena kemudahan dan manfaat yang besar tak khayal jenkins menjadi salah satu tool CI/CD favorit. (gilak sih mirip reporter)
+Dalam perkembangannya ketika kita menggunakan Jenkins untuk bisa mengetahui seluruh pipeline sudah selesai berjalan atau belum terkadang kita harus mengakses dashboard untuk mengetahui prosesnya. Sebenarnya ada plugin sendiri dari jenkins menyediakan notifikasi ke email ketika pipeline gagal selesai, namun tidak ada notifikasi kapan pipeline jalan dan selesai.</description>
+    </item>
+    
     <item>
       <title>Mengganti Ukuran Log Docker Container</title>
       <link>https://yuswitayudi.github.io/posts/mengganti-log-size/</link>
