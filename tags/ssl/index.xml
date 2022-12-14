@@ -9,7 +9,19 @@
       <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 03 Nov 2022 09:32:15 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Dec 2022 14:51:57 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create SSL Nginx with Ansible</title>
+      <link>https://yuswitayudi.github.io/posts/ansible-create-https/</link>
+      <pubDate>Wed, 14 Dec 2022 14:51:57 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/posts/ansible-create-https/</guid>
+      <description>This is maybe one of the longest notes in this notes. Here we go&amp;hellip;.
+First before I meet this ansible roles, when I want to deploy domain name with nginx server. I only install and deploy ssl to manage HTTPS certbot with manually installation which is use standard command line. This is very repetitive and there will be chances human error.
+requirements:
+ nginx ansible-playbook ssh connection  So when I feel I can be better than it, I decide to use ansible to create repetitive task.</description>
+    </item>
+    
     <item>
       <title>Generate SSL from DNS challanges with certbot</title>
       <link>https://yuswitayudi.github.io/posts/generate-ssl-dns/</link>

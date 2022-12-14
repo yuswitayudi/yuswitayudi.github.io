@@ -9,7 +9,43 @@
       <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 06 Dec 2022 09:14:40 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Dec 2022 14:51:57 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ansible</title>
+      <link>https://yuswitayudi.github.io/tags/ansible/</link>
+      <pubDate>Wed, 14 Dec 2022 14:51:57 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/tags/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>certbot</title>
+      <link>https://yuswitayudi.github.io/tags/certbot/</link>
+      <pubDate>Wed, 14 Dec 2022 14:51:57 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/tags/certbot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nginx</title>
+      <link>https://yuswitayudi.github.io/tags/nginx/</link>
+      <pubDate>Wed, 14 Dec 2022 14:51:57 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssl</title>
+      <link>https://yuswitayudi.github.io/tags/ssl/</link>
+      <pubDate>Wed, 14 Dec 2022 14:51:57 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/tags/ssl/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>jenkins</title>
       <link>https://yuswitayudi.github.io/tags/jenkins/</link>
@@ -88,33 +124,6 @@
       <pubDate>Thu, 10 Nov 2022 15:39:17 +0700</pubDate>
       
       <guid>https://yuswitayudi.github.io/tags/vpn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>certbot</title>
-      <link>https://yuswitayudi.github.io/tags/certbot/</link>
-      <pubDate>Thu, 03 Nov 2022 09:32:15 +0700</pubDate>
-      
-      <guid>https://yuswitayudi.github.io/tags/certbot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>nginx</title>
-      <link>https://yuswitayudi.github.io/tags/nginx/</link>
-      <pubDate>Thu, 03 Nov 2022 09:32:15 +0700</pubDate>
-      
-      <guid>https://yuswitayudi.github.io/tags/nginx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ssl</title>
-      <link>https://yuswitayudi.github.io/tags/ssl/</link>
-      <pubDate>Thu, 03 Nov 2022 09:32:15 +0700</pubDate>
-      
-      <guid>https://yuswitayudi.github.io/tags/ssl/</guid>
       <description></description>
     </item>
     

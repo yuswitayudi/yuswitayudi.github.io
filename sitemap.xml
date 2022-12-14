@@ -3,8 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://yuswitayudi.github.io/tags/ansible/</loc>
+    <lastmod>2022-12-14T14:51:57+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yuswitayudi.github.io/</loc>
-    <lastmod>2022-12-06T09:14:40+07:00</lastmod>
+    <lastmod>2022-12-14T14:51:57+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yuswitayudi.github.io/tags/certbot/</loc>
+    <lastmod>2022-12-14T14:51:57+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yuswitayudi.github.io/posts/ansible-create-https/</loc>
+    <lastmod>2022-12-14T14:51:57+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yuswitayudi.github.io/tags/nginx/</loc>
+    <lastmod>2022-12-14T14:51:57+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yuswitayudi.github.io/posts/</loc>
+    <lastmod>2022-12-14T14:51:57+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yuswitayudi.github.io/tags/ssl/</loc>
+    <lastmod>2022-12-14T14:51:57+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yuswitayudi.github.io/tags/</loc>
+    <lastmod>2022-12-14T14:51:57+07:00</lastmod>
   </url>
   
   <url>
@@ -14,16 +49,6 @@
   
   <url>
     <loc>https://yuswitayudi.github.io/posts/jenkins-ci-slack/</loc>
-    <lastmod>2022-12-06T09:14:40+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yuswitayudi.github.io/posts/</loc>
-    <lastmod>2022-12-06T09:14:40+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yuswitayudi.github.io/tags/</loc>
     <lastmod>2022-12-06T09:14:40+07:00</lastmod>
   </url>
   
@@ -93,22 +118,7 @@
   </url>
   
   <url>
-    <loc>https://yuswitayudi.github.io/tags/certbot/</loc>
-    <lastmod>2022-11-03T09:32:15+07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://yuswitayudi.github.io/posts/generate-ssl-dns/</loc>
-    <lastmod>2022-11-03T09:32:15+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yuswitayudi.github.io/tags/nginx/</loc>
-    <lastmod>2022-11-03T09:32:15+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yuswitayudi.github.io/tags/ssl/</loc>
     <lastmod>2022-11-03T09:32:15+07:00</lastmod>
   </url>
   
