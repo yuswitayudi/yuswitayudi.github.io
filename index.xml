@@ -9,7 +9,19 @@
       <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 23 Dec 2022 14:52:05 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Jan 2023 20:25:39 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to connect AWS eks from kubectl</title>
+      <link>https://yuswitayudi.github.io/posts/aws-kubeconfig/</link>
+      <pubDate>Fri, 13 Jan 2023 20:25:39 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/posts/aws-kubeconfig/</guid>
+      <description>By the way this is the new journey to handled cloud provider like AWS, with complexity because I don&amp;rsquo;t have many knowledge about that. Okay back to the topic.
+Requirement you must have:
+ AWS CLI kubectl access key and secret key AWS  For the first make sure you can access the AWS from aws CLI, run this command
+aws eks list-cluster if you dont have any default region, you can add with --region parameter.</description>
+    </item>
+    
     <item>
       <title>Botkube and Slack to Monitor and Notification</title>
       <link>https://yuswitayudi.github.io/posts/botkube-and-slack/</link>
