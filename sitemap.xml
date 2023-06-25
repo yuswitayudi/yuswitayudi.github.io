@@ -1,218 +1,132 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://yuswitayudi.github.io/</loc>
     <lastmod>2023-01-13T20:25:39+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/aws/</loc>
     <lastmod>2023-01-13T20:25:39+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/aws-kubeconfig/</loc>
     <lastmod>2023-01-13T20:25:39+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/kubernetes/</loc>
     <lastmod>2023-01-13T20:25:39+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/</loc>
     <lastmod>2023-01-13T20:25:39+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/</loc>
     <lastmod>2023-01-13T20:25:39+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/botkube-and-slack/</loc>
     <lastmod>2022-12-23T14:52:05+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/slack/</loc>
     <lastmod>2022-12-23T14:52:05+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/ansible/</loc>
     <lastmod>2022-12-14T14:51:57+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/certbot/</loc>
     <lastmod>2022-12-14T14:51:57+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/ansible-create-https/</loc>
     <lastmod>2022-12-14T14:51:57+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/nginx/</loc>
     <lastmod>2022-12-14T14:51:57+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/ssl/</loc>
     <lastmod>2022-12-14T14:51:57+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/jenkins/</loc>
     <lastmod>2022-12-06T09:14:40+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/jenkins-ci-slack/</loc>
     <lastmod>2022-12-06T09:14:40+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/docker/</loc>
     <lastmod>2022-11-24T16:09:01+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/mengganti-log-size/</loc>
     <lastmod>2022-11-24T16:09:01+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/deployment/</loc>
     <lastmod>2022-11-22T15:35:09+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/gitlab/</loc>
     <lastmod>2022-11-22T15:35:09+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/gitlab-ci-perubahan-folder/</loc>
     <lastmod>2022-11-22T15:35:09+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/development/</loc>
     <lastmod>2022-11-17T11:14:46+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/skaffold-simple/</loc>
     <lastmod>2022-11-17T11:14:46+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/terraform-digitalocean/</loc>
     <lastmod>2022-11-14T13:16:46+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/server/</loc>
     <lastmod>2022-11-14T13:16:46+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/terraform/</loc>
     <lastmod>2022-11-14T13:16:46+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/change-subnet/</loc>
     <lastmod>2022-11-10T15:39:17+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/vpn/</loc>
     <lastmod>2022-11-10T15:39:17+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/generate-ssl-dns/</loc>
     <lastmod>2022-11-03T09:32:15+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/linux/</loc>
     <lastmod>2022-10-28T17:02:51+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/nginx-error/</loc>
     <lastmod>2022-10-28T17:02:51+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/cara-run-python-gunicorn/</loc>
     <lastmod>2022-10-17T11:27:29+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/python/</loc>
     <lastmod>2022-10-17T11:27:29+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/statefuld-stateless/</loc>
     <lastmod>2022-10-12T17:25:04+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/https/</loc>
     <lastmod>2022-09-27T11:23:19+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/membuat-https-dengan-cert-manager/</loc>
     <lastmod>2022-09-27T11:23:19+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/rbac-untuk-user/</loc>
     <lastmod>2022-09-26T10:20:10+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/zerodowntime-deployment-k8s/</loc>
     <lastmod>2022-09-20T10:05:59+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/cara-posting/</loc>
     <lastmod>2022-07-01T14:26:37+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/hugo/</loc>
     <lastmod>2022-07-01T14:26:37+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/about/</loc>
     <lastmod>2022-06-16T16:56:32+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/posts/intro/</loc>
     <lastmod>2022-06-16T16:48:56+07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://yuswitayudi.github.io/tags/ci/cd/</loc>
   </url>
-  
 </urlset>
