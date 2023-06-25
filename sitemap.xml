@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://yuswitayudi.github.io/about/</loc>
+    <lastmod>2023-06-25T16:56:32+07:00</lastmod>
+  </url><url>
     <loc>https://yuswitayudi.github.io/</loc>
     <lastmod>2023-01-13T20:25:39+07:00</lastmod>
   </url><url>
@@ -118,9 +121,6 @@
   </url><url>
     <loc>https://yuswitayudi.github.io/tags/hugo/</loc>
     <lastmod>2022-07-01T14:26:37+07:00</lastmod>
-  </url><url>
-    <loc>https://yuswitayudi.github.io/about/</loc>
-    <lastmod>2022-06-16T16:56:32+07:00</lastmod>
   </url><url>
     <loc>https://yuswitayudi.github.io/posts/intro/</loc>
     <lastmod>2022-06-16T16:48:56+07:00</lastmod>
