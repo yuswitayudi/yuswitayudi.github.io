@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>ssl on AWNESIA</title>
+    <title>Ssl on AWNESIA</title>
     <link>https://yuswitayudi.github.io/tags/ssl/</link>
-    <description>Recent content in ssl on AWNESIA</description>
+    <description>Recent content in Ssl on AWNESIA</description>
     <image>
       <title>AWNESIA</title>
       <url>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Wed, 14 Dec 2022 14:51:57 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create SSL Nginx with Ansible</title>
@@ -20,7 +21,7 @@
       <description>This is maybe one of the longest notes in this notes. Here we go&amp;hellip;.
 First before I meet this ansible roles, when I want to deploy domain name with nginx server. I only install and deploy ssl to manage HTTPS certbot with manually installation which is use standard command line. This is very repetitive and there will be chances human error.
 requirements:
- nginx ansible-playbook ssh connection  So when I feel I can be better than it, I decide to use ansible to create repetitive task.</description>
+nginx ansible-playbook ssh connection So when I feel I can be better than it, I decide to use ansible to create repetitive task.</description>
     </item>
     
     <item>

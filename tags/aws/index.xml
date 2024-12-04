@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>aws on AWNESIA</title>
+    <title>Aws on AWNESIA</title>
     <link>https://yuswitayudi.github.io/tags/aws/</link>
-    <description>Recent content in aws on AWNESIA</description>
+    <description>Recent content in Aws on AWNESIA</description>
     <image>
       <title>AWNESIA</title>
       <url>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Fri, 13 Jan 2023 20:25:39 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to connect AWS eks from kubectl</title>
@@ -19,7 +20,7 @@
       <guid>https://yuswitayudi.github.io/posts/aws-kubeconfig/</guid>
       <description>By the way this is the new journey to handled cloud provider like AWS, with complexity because I don&amp;rsquo;t have many knowledge about that. Okay back to the topic.
 Requirement you must have:
- AWS CLI kubectl access key and secret key AWS  For the first make sure you can access the AWS from aws CLI, run this command
+AWS CLI kubectl access key and secret key AWS For the first make sure you can access the AWS from aws CLI, run this command
 aws eks list-cluster if you dont have any default region, you can add with --region parameter.</description>
     </item>
     

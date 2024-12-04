@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>docker on AWNESIA</title>
+    <title>Docker on AWNESIA</title>
     <link>https://yuswitayudi.github.io/tags/docker/</link>
-    <description>Recent content in docker on AWNESIA</description>
+    <description>Recent content in Docker on AWNESIA</description>
     <image>
       <title>AWNESIA</title>
       <url>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Thu, 24 Nov 2022 16:09:01 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mengganti Ukuran Log Docker Container</title>
@@ -18,7 +19,7 @@
       
       <guid>https://yuswitayudi.github.io/posts/mengganti-log-size/</guid>
       <description>Ukuran log yang besar pasti suatu saat akan membuatmu mikir-mikir tentang disk kan. Nah untuk itu kita perlu mengatur berapa ukuran yang ada pada docker container. Ini dijalankan dengan docker-compose maupun docker container.
-Docker compose version: &#39;3&#39; services: nginx: image: nginx:latest hostname: ubuntu logging: options: tag: &amp;quot;{{.Name}}&amp;quot; max-size: 50m labels: - &amp;quot;autoheal=true&amp;quot; Docker container docker run -d --name nginx --log-opt max-size=50m
+Docker compose version: &amp;#39;3&amp;#39; services: nginx: image: nginx:latest hostname: ubuntu logging: options: tag: &amp;#34;{{.Name}}&amp;#34; max-size: 50m labels: - &amp;#34;autoheal=true&amp;#34; Docker container docker run -d --name nginx --log-opt max-size=50m
 Dari kedua cara diatas akan membatasi log ke ukuran 50 megabytes saja.</description>
     </item>
     

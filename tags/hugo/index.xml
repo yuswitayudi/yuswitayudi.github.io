@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>hugo on AWNESIA</title>
+    <title>Hugo on AWNESIA</title>
     <link>https://yuswitayudi.github.io/tags/hugo/</link>
-    <description>Recent content in hugo on AWNESIA</description>
+    <description>Recent content in Hugo on AWNESIA</description>
     <image>
       <title>AWNESIA</title>
       <url>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Fri, 01 Jul 2022 14:26:37 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cara posting menggunakan hugo</title>
@@ -17,7 +18,7 @@
       <pubDate>Fri, 01 Jul 2022 14:26:37 +0700</pubDate>
       
       <guid>https://yuswitayudi.github.io/posts/cara-posting/</guid>
-      <description>Ini adalah langkah Posting menggunakan hugo  Buat file markdown baru  hugo new posts/nama_file.md  Edit file postingan sesuai kesukaanmu Buat file deploy.sh untuk otomatisasi push code dan deploy pada github.io  #!/bin/bash echo -e &amp;quot;\033[0;32mDeploying updates to GitHub...\033[0m&amp;quot; # Generate file statis hugo # if using a theme, replace by `hugo -t &amp;lt;yourtheme&amp;gt;` # pindah ke direktoru publik cd public # tambahkan perubahan ke Git git add -A # Buat sebuah commit baru msg=&amp;quot;rebuilding site `date`&amp;quot; if [ $# -eq 1 ] then msg=&amp;quot;$1&amp;quot; fi git commit -m &amp;quot;$msg&amp;quot; # Push atau puload ke Github git push origin master # Balik ke direktori sebelumnya cd .</description>
+      <description>Ini adalah langkah Posting menggunakan hugo Buat file markdown baru hugo new posts/nama_file.md Edit file postingan sesuai kesukaanmu Buat file deploy.sh untuk otomatisasi push code dan deploy pada github.io #!/bin/bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Generate file statis hugo # if using a theme, replace by `hugo -t &amp;lt;yourtheme&amp;gt;` # pindah ke direktoru publik cd public # tambahkan perubahan ke Git git add -A # Buat sebuah commit baru msg=&amp;#34;rebuilding site `date`&amp;#34; if [ $# -eq 1 ] then msg=&amp;#34;$1&amp;#34; fi git commit -m &amp;#34;$msg&amp;#34; # Push atau puload ke Github git push origin master # Balik ke direktori sebelumnya cd .</description>
     </item>
     
   </channel>

@@ -10,9 +10,10 @@
       <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Fri, 13 Jan 2023 20:25:39 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>aws</title>
+      <title>Aws</title>
       <link>https://yuswitayudi.github.io/tags/aws/</link>
       <pubDate>Fri, 13 Jan 2023 20:25:39 +0700</pubDate>
       
@@ -21,7 +22,7 @@
     </item>
     
     <item>
-      <title>kubernetes</title>
+      <title>Kubernetes</title>
       <link>https://yuswitayudi.github.io/tags/kubernetes/</link>
       <pubDate>Fri, 13 Jan 2023 20:25:39 +0700</pubDate>
       
@@ -30,7 +31,7 @@
     </item>
     
     <item>
-      <title>slack</title>
+      <title>Slack</title>
       <link>https://yuswitayudi.github.io/tags/slack/</link>
       <pubDate>Fri, 23 Dec 2022 14:52:05 +0700</pubDate>
       
@@ -39,7 +40,7 @@
     </item>
     
     <item>
-      <title>ansible</title>
+      <title>Ansible</title>
       <link>https://yuswitayudi.github.io/tags/ansible/</link>
       <pubDate>Wed, 14 Dec 2022 14:51:57 +0700</pubDate>
       
@@ -48,7 +49,7 @@
     </item>
     
     <item>
-      <title>certbot</title>
+      <title>Certbot</title>
       <link>https://yuswitayudi.github.io/tags/certbot/</link>
       <pubDate>Wed, 14 Dec 2022 14:51:57 +0700</pubDate>
       
@@ -57,7 +58,7 @@
     </item>
     
     <item>
-      <title>nginx</title>
+      <title>Nginx</title>
       <link>https://yuswitayudi.github.io/tags/nginx/</link>
       <pubDate>Wed, 14 Dec 2022 14:51:57 +0700</pubDate>
       
@@ -66,7 +67,7 @@
     </item>
     
     <item>
-      <title>ssl</title>
+      <title>Ssl</title>
       <link>https://yuswitayudi.github.io/tags/ssl/</link>
       <pubDate>Wed, 14 Dec 2022 14:51:57 +0700</pubDate>
       
@@ -75,7 +76,16 @@
     </item>
     
     <item>
-      <title>jenkins</title>
+      <title>CI/CD</title>
+      <link>https://yuswitayudi.github.io/tags/ci/cd/</link>
+      <pubDate>Tue, 06 Dec 2022 09:14:40 +0700</pubDate>
+      
+      <guid>https://yuswitayudi.github.io/tags/ci/cd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jenkins</title>
       <link>https://yuswitayudi.github.io/tags/jenkins/</link>
       <pubDate>Tue, 06 Dec 2022 09:14:40 +0700</pubDate>
       
@@ -84,7 +94,7 @@
     </item>
     
     <item>
-      <title>docker</title>
+      <title>Docker</title>
       <link>https://yuswitayudi.github.io/tags/docker/</link>
       <pubDate>Thu, 24 Nov 2022 16:09:01 +0700</pubDate>
       
@@ -93,7 +103,7 @@
     </item>
     
     <item>
-      <title>deployment</title>
+      <title>Deployment</title>
       <link>https://yuswitayudi.github.io/tags/deployment/</link>
       <pubDate>Tue, 22 Nov 2022 15:35:09 +0700</pubDate>
       
@@ -102,7 +112,7 @@
     </item>
     
     <item>
-      <title>gitlab</title>
+      <title>Gitlab</title>
       <link>https://yuswitayudi.github.io/tags/gitlab/</link>
       <pubDate>Tue, 22 Nov 2022 15:35:09 +0700</pubDate>
       
@@ -111,7 +121,7 @@
     </item>
     
     <item>
-      <title>development</title>
+      <title>Development</title>
       <link>https://yuswitayudi.github.io/tags/development/</link>
       <pubDate>Thu, 17 Nov 2022 11:14:46 +0700</pubDate>
       
@@ -120,7 +130,7 @@
     </item>
     
     <item>
-      <title>server</title>
+      <title>Server</title>
       <link>https://yuswitayudi.github.io/tags/server/</link>
       <pubDate>Mon, 14 Nov 2022 13:16:46 +0700</pubDate>
       
@@ -129,7 +139,7 @@
     </item>
     
     <item>
-      <title>terraform</title>
+      <title>Terraform</title>
       <link>https://yuswitayudi.github.io/tags/terraform/</link>
       <pubDate>Mon, 14 Nov 2022 13:16:46 +0700</pubDate>
       
@@ -147,7 +157,7 @@
     </item>
     
     <item>
-      <title>linux</title>
+      <title>Linux</title>
       <link>https://yuswitayudi.github.io/tags/linux/</link>
       <pubDate>Fri, 28 Oct 2022 17:02:51 +0700</pubDate>
       
@@ -156,7 +166,7 @@
     </item>
     
     <item>
-      <title>python</title>
+      <title>Python</title>
       <link>https://yuswitayudi.github.io/tags/python/</link>
       <pubDate>Mon, 17 Oct 2022 11:27:29 +0700</pubDate>
       
@@ -165,7 +175,7 @@
     </item>
     
     <item>
-      <title>https</title>
+      <title>Https</title>
       <link>https://yuswitayudi.github.io/tags/https/</link>
       <pubDate>Tue, 27 Sep 2022 11:23:19 +0700</pubDate>
       
@@ -174,20 +184,11 @@
     </item>
     
     <item>
-      <title>hugo</title>
+      <title>Hugo</title>
       <link>https://yuswitayudi.github.io/tags/hugo/</link>
       <pubDate>Fri, 01 Jul 2022 14:26:37 +0700</pubDate>
       
       <guid>https://yuswitayudi.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CI/CD</title>
-      <link>https://yuswitayudi.github.io/tags/ci/cd/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yuswitayudi.github.io/tags/ci/cd/</guid>
       <description></description>
     </item>
     

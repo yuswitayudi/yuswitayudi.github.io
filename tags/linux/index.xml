@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>linux on AWNESIA</title>
+    <title>Linux on AWNESIA</title>
     <link>https://yuswitayudi.github.io/tags/linux/</link>
-    <description>Recent content in linux on AWNESIA</description>
+    <description>Recent content in Linux on AWNESIA</description>
     <image>
       <title>AWNESIA</title>
       <url>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Fri, 28 Oct 2022 17:02:51 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)</title>
