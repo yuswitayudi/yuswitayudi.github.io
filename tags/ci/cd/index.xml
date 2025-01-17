@@ -1,37 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CI/CD on AWNESIA</title>
     <link>https://yuswitayudi.github.io/tags/ci/cd/</link>
     <description>Recent content in CI/CD on AWNESIA</description>
-    <image>
-      <title>AWNESIA</title>
-      <url>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Dec 2022 09:14:40 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/tags/ci/cd/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Dec 2022 09:14:40 +0700</lastBuildDate>
+    <atom:link href="https://yuswitayudi.github.io/tags/ci/cd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Menghubungkan Slack dan Jenkins untuk mendapatkan notifikasi</title>
       <link>https://yuswitayudi.github.io/posts/jenkins-ci-slack/</link>
       <pubDate>Tue, 06 Dec 2022 09:14:40 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/jenkins-ci-slack/</guid>
-      <description>Jenkins merupakan salahsatu aplikasi CI/CD yang sering digunakan untuk deployment sebuah aplikasi di production. Karena kemudahan untuk customizable deployment bisa dengan declarative pipeline maupun freestyle pipeline. Oleh karena kemudahan dan manfaat yang besar tak khayal jenkins menjadi salah satu tool CI/CD favorit. (gilak sih mirip reporter)
-Dalam perkembangannya ketika kita menggunakan Jenkins untuk bisa mengetahui seluruh pipeline sudah selesai berjalan atau belum terkadang kita harus mengakses dashboard untuk mengetahui prosesnya.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/two-confident-business-man-shaking-hands-during-meeting-office-success-dealing-greeting-partner-concept_1423-199.jpg?w=740&amp;amp;t=st=1670293052~exp=1670293652~hmac=cd72d25bdb2837201c78d9b5e02860bb99c48137108114a9821c62e48fe96b27&#34; alt=&#34;connections&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Jenkins merupakan salahsatu aplikasi CI/CD yang sering digunakan untuk deployment sebuah aplikasi di production. Karena kemudahan untuk customizable deployment bisa dengan &lt;em&gt;declarative pipeline&lt;/em&gt; maupun &lt;em&gt;freestyle pipeline&lt;/em&gt;. Oleh karena kemudahan dan manfaat yang besar tak khayal jenkins menjadi salah satu tool &lt;a href=&#34;https://yuswitayudi.github.io/tags/ci/cd/&#34;&gt;CI/CD&lt;/a&gt; favorit. (gilak sih mirip reporter)&lt;/p&gt;&#xA;&lt;p&gt;Dalam perkembangannya ketika kita menggunakan Jenkins untuk bisa mengetahui seluruh pipeline sudah selesai berjalan atau belum terkadang kita harus mengakses dashboard untuk mengetahui prosesnya. Sebenarnya ada plugin sendiri dari jenkins menyediakan notifikasi ke email ketika pipeline gagal selesai, namun tidak ada notifikasi kapan pipeline jalan dan selesai.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Melakukan Deploy ketika ada Perubahan pada Folder Menggunakan GitLab CI</title>
       <link>https://yuswitayudi.github.io/posts/gitlab-ci-perubahan-folder/</link>
       <pubDate>Tue, 22 Nov 2022 15:35:09 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/gitlab-ci-perubahan-folder/</guid>
-      <description>Yakkk
-Again-again semua catatan yang telah tertulis di web ini murni dari sudut pandang sang penulis ya, jadi apabila ada perbedaan ya wajar dong.
-Oke langsung ke contoh kasus, biasanya untuk depoyment menggunakan metode gitfow akan ada proses trigering untuk melakukan suatu aksi ketika sudah merged ke salah satu branch. Contoh apabila ada merged ke branch staging, maka akan triggering ke webhook yang ada di jenkins untuk deployment pada service yang berada pada environment staging.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/construction-works-frankfurt-downtown-germany_1268-20907.jpg?w=1480&amp;amp;t=st=1669106538~exp=1669107138~hmac=b90b84671fbb8676c7985802ca45dd89f031809cefcb4be0b4adedf5433fd964&#34; alt=&#34;Trigger folder&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Yakkk&lt;/p&gt;&#xA;&lt;p&gt;Again-again semua catatan yang telah tertulis di web ini murni dari sudut pandang sang penulis ya, jadi apabila ada perbedaan ya wajar dong.&lt;/p&gt;&#xA;&lt;p&gt;Oke langsung ke contoh kasus, biasanya untuk depoyment menggunakan metode gitfow akan ada proses trigering untuk melakukan suatu aksi ketika sudah merged ke salah satu branch. Contoh apabila ada merged ke branch staging, maka akan triggering ke webhook yang ada di jenkins untuk deployment pada service yang berada pada environment staging. Begitupun jika ada merged pada branch production akan melakukan hal yang sama.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

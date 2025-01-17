@@ -1,215 +1,138 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on AWNESIA</title>
     <link>https://yuswitayudi.github.io/posts/</link>
     <description>Recent content in Posts on AWNESIA</description>
-    <image>
-      <title>AWNESIA</title>
-      <url>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Jan 2023 20:25:39 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Jan 2023 20:25:39 +0700</lastBuildDate>
+    <atom:link href="https://yuswitayudi.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to connect AWS eks from kubectl</title>
       <link>https://yuswitayudi.github.io/posts/aws-kubeconfig/</link>
       <pubDate>Fri, 13 Jan 2023 20:25:39 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/aws-kubeconfig/</guid>
-      <description>By the way this is the new journey to handled cloud provider like AWS, with complexity because I don&amp;rsquo;t have many knowledge about that. Okay back to the topic.
-Requirement you must have:
-AWS CLI kubectl access key and secret key AWS For the first make sure you can access the AWS from aws CLI, run this command
-aws eks list-cluster if you dont have any default region, you can add with --region parameter.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/networking-concept-still-life-assortment_23-2149035669.jpg?w=900&amp;amp;t=st=1673616478~exp=1673617078~hmac=27e52e4009e468080a51d0c333ab5da2d7593782072ee7452b767563975b7b23&#34; alt=&#34;awskubernetes&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;By the way this is the new journey to handled cloud provider like AWS, with complexity because I don&amp;rsquo;t have many knowledge about that. Okay back to the topic.&lt;/p&gt;&#xA;&lt;p&gt;Requirement you must have:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AWS CLI&lt;/li&gt;&#xA;&lt;li&gt;kubectl&lt;/li&gt;&#xA;&lt;li&gt;access key and secret key AWS&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;For the first make sure you can access the AWS from aws CLI, run this command&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;aws eks list-cluster&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;if you dont have any default region, you can add with &lt;code&gt;--region&lt;/code&gt; parameter. Ex: &lt;code&gt;--region us-west-1&lt;/code&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Botkube and Slack to Monitor and Notification</title>
       <link>https://yuswitayudi.github.io/posts/botkube-and-slack/</link>
       <pubDate>Fri, 23 Dec 2022 14:52:05 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/botkube-and-slack/</guid>
-      <description>Botkube is one of the best tool opensource I know, this very simple to install and useful. The mechanism is Botkube need token to connect each other with slack. So the first thing we need to install app on slack to configure collaborate with botkube. Actually documentation of botkube is helpull and complete, but you know this is not tutorial page :)). I just want to keep in my notes if in anytime I need.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/hands-holding-puzzle-business-problem-solving-concept_53876-129016.jpg?w=826&amp;amp;t=st=1671834901~exp=1671835501~hmac=d3b2f497fb6ee4ba2aa335e08579bc27d600c92e383e68b5fa61fd4bd7a368b4&#34; alt=&#34;botkube&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Botkube is one of the best tool opensource I know, this very simple to install and useful. The mechanism is Botkube need token to connect each other with slack. So the first thing we need to install app on slack to configure collaborate with botkube. Actually documentation of botkube is helpull and complete, but you know this is not tutorial page :)). I just want to keep in my &lt;a href=&#34;https://yuswitayudi.github.io/posts/&#34;&gt;notes&lt;/a&gt; if in  anytime I need.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Create SSL Nginx with Ansible</title>
       <link>https://yuswitayudi.github.io/posts/ansible-create-https/</link>
       <pubDate>Wed, 14 Dec 2022 14:51:57 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/ansible-create-https/</guid>
-      <description>This is maybe one of the longest notes in this notes. Here we go&amp;hellip;.
-First before I meet this ansible roles, when I want to deploy domain name with nginx server. I only install and deploy ssl to manage HTTPS certbot with manually installation which is use standard command line. This is very repetitive and there will be chances human error.
-requirements:
-nginx ansible-playbook ssh connection So when I feel I can be better than it, I decide to use ansible to create repetitive task.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/infrastructure-bridge_1127-2226.jpg?w=1380&amp;amp;t=st=1669198797~exp=1669199397~hmac=f55619eceb4191fb043a3ca8fe30cd9d2bbffc8f296b1924eaa5e4131502e7aa&#34; alt=&#34;multiple way&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This is maybe one of the longest notes in this notes. Here we go&amp;hellip;.&lt;/p&gt;&#xA;&lt;p&gt;First before I meet this ansible roles, when I want to deploy domain name with nginx server. I only install and deploy ssl to manage HTTPS certbot with manually installation which is use standard command line. This is very repetitive and there will be chances human error.&lt;/p&gt;&#xA;&lt;p&gt;requirements:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;nginx&lt;/li&gt;&#xA;&lt;li&gt;ansible-playbook&lt;/li&gt;&#xA;&lt;li&gt;ssh connection&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;So when I feel I can be better than it, I decide to use ansible to create repetitive task. And after the long way I create this ansible roles:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Menghubungkan Slack dan Jenkins untuk mendapatkan notifikasi</title>
       <link>https://yuswitayudi.github.io/posts/jenkins-ci-slack/</link>
       <pubDate>Tue, 06 Dec 2022 09:14:40 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/jenkins-ci-slack/</guid>
-      <description>Jenkins merupakan salahsatu aplikasi CI/CD yang sering digunakan untuk deployment sebuah aplikasi di production. Karena kemudahan untuk customizable deployment bisa dengan declarative pipeline maupun freestyle pipeline. Oleh karena kemudahan dan manfaat yang besar tak khayal jenkins menjadi salah satu tool CI/CD favorit. (gilak sih mirip reporter)
-Dalam perkembangannya ketika kita menggunakan Jenkins untuk bisa mengetahui seluruh pipeline sudah selesai berjalan atau belum terkadang kita harus mengakses dashboard untuk mengetahui prosesnya.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/two-confident-business-man-shaking-hands-during-meeting-office-success-dealing-greeting-partner-concept_1423-199.jpg?w=740&amp;amp;t=st=1670293052~exp=1670293652~hmac=cd72d25bdb2837201c78d9b5e02860bb99c48137108114a9821c62e48fe96b27&#34; alt=&#34;connections&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Jenkins merupakan salahsatu aplikasi CI/CD yang sering digunakan untuk deployment sebuah aplikasi di production. Karena kemudahan untuk customizable deployment bisa dengan &lt;em&gt;declarative pipeline&lt;/em&gt; maupun &lt;em&gt;freestyle pipeline&lt;/em&gt;. Oleh karena kemudahan dan manfaat yang besar tak khayal jenkins menjadi salah satu tool &lt;a href=&#34;https://yuswitayudi.github.io/tags/ci/cd/&#34;&gt;CI/CD&lt;/a&gt; favorit. (gilak sih mirip reporter)&lt;/p&gt;&#xA;&lt;p&gt;Dalam perkembangannya ketika kita menggunakan Jenkins untuk bisa mengetahui seluruh pipeline sudah selesai berjalan atau belum terkadang kita harus mengakses dashboard untuk mengetahui prosesnya. Sebenarnya ada plugin sendiri dari jenkins menyediakan notifikasi ke email ketika pipeline gagal selesai, namun tidak ada notifikasi kapan pipeline jalan dan selesai.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Mengganti Ukuran Log Docker Container</title>
       <link>https://yuswitayudi.github.io/posts/mengganti-log-size/</link>
       <pubDate>Thu, 24 Nov 2022 16:09:01 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/mengganti-log-size/</guid>
-      <description>Ukuran log yang besar pasti suatu saat akan membuatmu mikir-mikir tentang disk kan. Nah untuk itu kita perlu mengatur berapa ukuran yang ada pada docker container. Ini dijalankan dengan docker-compose maupun docker container.
-Docker compose version: &amp;#39;3&amp;#39; services: nginx: image: nginx:latest hostname: ubuntu logging: options: tag: &amp;#34;{{.Name}}&amp;#34; max-size: 50m labels: - &amp;#34;autoheal=true&amp;#34; Docker container docker run -d --name nginx --log-opt max-size=50m
-Dari kedua cara diatas akan membatasi log ke ukuran 50 megabytes saja.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/vintage-tailor-ruler-isolated-down-part-aged-wooden-table_346278-918.jpg?w=1380&amp;amp;t=st=1669281043~exp=1669281643~hmac=cf874a267123fad2f648bda388d90fb2f41d1940869263dc9bcdeb2e78c70e6f&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Ukuran log yang besar pasti suatu saat akan membuatmu mikir-mikir tentang disk kan. Nah untuk itu kita perlu mengatur berapa ukuran yang ada pada docker container. Ini dijalankan dengan docker-compose maupun docker container.&lt;/p&gt;&#xA;&lt;h3 id=&#34;docker-compose&#34;&gt;Docker compose&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;version: &amp;#39;3&amp;#39;&#xA;services:&#xA;  nginx:&#xA;    image: nginx:latest&#xA;    hostname: ubuntu&#xA;    logging:&#xA;     options:&#xA;       tag: &amp;#34;{{.Name}}&amp;#34;&#xA;       max-size: 50m&#xA;    labels:&#xA;      - &amp;#34;autoheal=true&amp;#34;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;docker-container&#34;&gt;Docker container&lt;/h3&gt;&#xA;&lt;p&gt;&lt;code&gt;docker run -d --name nginx --log-opt max-size=50m&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Dari kedua cara diatas akan membatasi log ke ukuran 50 megabytes saja. Oiya tambahan di file docker-compose diatas terdapat label untuk autoheal, itu digunakan untuk membuat container baru ketika container statusnya sudah &lt;code&gt;unhealthy&lt;/code&gt;. Sumber bisa baca disini &lt;a href=&#34;https://hub.docker.com/r/willfarrell/autoheal/&#34;&gt;https://hub.docker.com/r/willfarrell/autoheal/&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Melakukan Deploy ketika ada Perubahan pada Folder Menggunakan GitLab CI</title>
       <link>https://yuswitayudi.github.io/posts/gitlab-ci-perubahan-folder/</link>
       <pubDate>Tue, 22 Nov 2022 15:35:09 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/gitlab-ci-perubahan-folder/</guid>
-      <description>Yakkk
-Again-again semua catatan yang telah tertulis di web ini murni dari sudut pandang sang penulis ya, jadi apabila ada perbedaan ya wajar dong.
-Oke langsung ke contoh kasus, biasanya untuk depoyment menggunakan metode gitfow akan ada proses trigering untuk melakukan suatu aksi ketika sudah merged ke salah satu branch. Contoh apabila ada merged ke branch staging, maka akan triggering ke webhook yang ada di jenkins untuk deployment pada service yang berada pada environment staging.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/construction-works-frankfurt-downtown-germany_1268-20907.jpg?w=1480&amp;amp;t=st=1669106538~exp=1669107138~hmac=b90b84671fbb8676c7985802ca45dd89f031809cefcb4be0b4adedf5433fd964&#34; alt=&#34;Trigger folder&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Yakkk&lt;/p&gt;&#xA;&lt;p&gt;Again-again semua catatan yang telah tertulis di web ini murni dari sudut pandang sang penulis ya, jadi apabila ada perbedaan ya wajar dong.&lt;/p&gt;&#xA;&lt;p&gt;Oke langsung ke contoh kasus, biasanya untuk depoyment menggunakan metode gitfow akan ada proses trigering untuk melakukan suatu aksi ketika sudah merged ke salah satu branch. Contoh apabila ada merged ke branch staging, maka akan triggering ke webhook yang ada di jenkins untuk deployment pada service yang berada pada environment staging. Begitupun jika ada merged pada branch production akan melakukan hal yang sama.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Menggunakan Skaffold untuk Kemudahan Development</title>
       <link>https://yuswitayudi.github.io/posts/skaffold-simple/</link>
       <pubDate>Thu, 17 Nov 2022 11:14:46 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/skaffold-simple/</guid>
-      <description>Nahh
-Kali ini saya menulis tentang skaffold, merupakan software development tool untuk membuat kinerja para developer yang melakukan repetitif menjadi mudah. Kenapa demikian? mari kita telisik dan telusuk.
-Pada umumnya seorang developer ketika mengerjakan suatu aplikasi, dia akan melakukan dan menjalankan di devicenya sendiri. Meskipun sudah menggunakan metode docker/container namun kadang masih terdapat perbedaan ketika sudah terdeploy pada server. Atau semisal ketika menjalankan sudah melakukan development pada kubernetes, pasti ada proses build image dan push ke registry dan hal tersebut sangat repetitif.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/confident-company-manager-giving-working-tasks-diverse-teamworkers-analysing-paperwork-with-graphs-sitting-start-up-office_482257-5103.jpg?w=1380&amp;amp;t=st=1668658940~exp=1668659540~hmac=dfa40a521887a9fc24159d1b62b4dc1170389a4cc1c3d6e237c23f489dfcdf0b&#34; alt=&#34;New task&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Nahh&lt;/p&gt;&#xA;&lt;p&gt;Kali ini saya menulis tentang &lt;a href=&#34;https://skaffold.dev/&#34;&gt;skaffold&lt;/a&gt;, merupakan software development tool untuk membuat kinerja para developer yang melakukan repetitif menjadi mudah. Kenapa demikian? mari kita telisik dan telusuk.&lt;/p&gt;&#xA;&lt;p&gt;Pada umumnya seorang developer ketika mengerjakan suatu aplikasi, dia akan melakukan dan menjalankan di devicenya sendiri. Meskipun sudah menggunakan metode docker/container namun kadang masih terdapat perbedaan ketika sudah terdeploy pada server. Atau semisal ketika menjalankan sudah melakukan development pada kubernetes, pasti ada proses build image dan push ke registry dan hal tersebut sangat repetitif.&#xA;Pada kasus kali ini catatanya adalah:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Membuat Droplet pada DigitalOcean menggunakan Terraform</title>
       <link>https://yuswitayudi.github.io/posts/terraform-digitalocean/</link>
       <pubDate>Mon, 14 Nov 2022 13:16:46 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/terraform-digitalocean/</guid>
-      <description>Yaaa memang bukan suatu hal yang wah, sekali lagi diriku mengingatkan bahwa web ini hanya sekedar catatan biasa oleh Yudi.
-Intro Sebenarnya membuat droplet pada DigitalOcean bisa sekali menggunakan Web UI melalui browser, akan tetapi jika suatu saat kita akan membuat droplet dengan jumlah yang banyak atau bisa dibilang repetitif dan dengan spesifikasi droplet yang sama. Maka butuh banyak klak klik klak klik oleh jari kita untuk bisa mencapai tujuan tersebut.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/premium-photo/bricklayer-industrial-worker-installing-brick-masonry-with-trowel-putty-knife-construction-site_33835-1135.jpg?w=1380&#34; alt=&#34;terraform&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Yaaa memang bukan suatu hal yang wah, sekali lagi diriku mengingatkan bahwa web ini hanya sekedar catatan biasa oleh &lt;a href=&#34;http://github.com/yuswitayudi&#34;&gt;Yudi&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;&#xA;&lt;p&gt;Sebenarnya membuat droplet pada DigitalOcean bisa sekali menggunakan Web UI melalui browser, akan tetapi jika suatu saat kita akan membuat droplet dengan jumlah yang banyak atau bisa dibilang repetitif dan dengan spesifikasi droplet yang sama. Maka butuh banyak klak klik klak klik oleh jari kita untuk bisa mencapai tujuan tersebut.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Change Subnet IP on OpenVPN Docker</title>
       <link>https://yuswitayudi.github.io/posts/change-subnet/</link>
       <pubDate>Thu, 10 Nov 2022 15:39:17 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/change-subnet/</guid>
-      <description>In another case we already setup openvpn with docker, and we want to change IP Address of vpn network. How we do it? But if you interest how to setup openvpn you just only visit this github repo
-In my case I already setup IP on 192.168.x.x but at one time we use that IP on wifi/router local. So that IP not work to access. To generate new IP we must generate new openvpn.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/walls-apartment-is-construction-remodeling-renovation-extension-restoration-reconstruction_493343-29444.jpg?w=1380&amp;amp;t=st=1668069749~exp=1668070349~hmac=554ede8dc03392689097aa21dd2e62624e30956a0bd2b8a771fbbd6733eef658&#34; alt=&#34;openvpn&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In another case we already setup openvpn with docker, and we want to change IP Address of vpn network. How we do it? But if you interest how to setup openvpn you just only visit this &lt;a href=&#34;https://github.com/kylemanna/docker-openvpn&#34;&gt;github repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;In my case I already setup IP on 192.168.x.x but at one time we use that IP on wifi/router local. So that IP not work to access. To generate new IP we must generate new &lt;strong&gt;openvpn.conf&lt;/strong&gt; and specify the IP Address&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Generate SSL from DNS challanges with certbot</title>
       <link>https://yuswitayudi.github.io/posts/generate-ssl-dns/</link>
       <pubDate>Thu, 03 Nov 2022 09:32:15 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/generate-ssl-dns/</guid>
-      <description>In this notes I will write on English, I just learn and get used to English.
-First thing first this my notes with Cloudflare domain management.
-Let&amp;rsquo;s start, I have problem to generate ssl on local network. Because local network don&amp;rsquo;t have public IP to be called from certbot, to authenticate that domain is valid.
-So from my boss I have knowledge to solve the problem with generate certificate from certbot with authenticate challange with DNS.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/premium-photo/https-encryption-improve-security-https-concept-with-search-sign-checkmark_507676-606.jpg?w=1800&#34; alt=&#34;SSL&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In this &lt;a href=&#34;https://yuswitayudi.github.io&#34;&gt;notes&lt;/a&gt; I will write on English, I just learn and get used to English.&lt;/p&gt;&#xA;&lt;p&gt;First thing first this my &lt;a href=&#34;https://yuswitayudi.github.io&#34;&gt;notes&lt;/a&gt; with &lt;strong&gt;Cloudflare&lt;/strong&gt; domain management.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s start, I have problem to generate ssl on local network. Because local network don&amp;rsquo;t have public IP to be called from certbot, to authenticate that domain is valid.&lt;/p&gt;&#xA;&lt;p&gt;So from &lt;a href=&#34;https://linggar.asia/&#34;&gt;my boss&lt;/a&gt; I have knowledge to solve the problem with generate certificate from certbot with authenticate challange with DNS.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)</title>
       <link>https://yuswitayudi.github.io/posts/nginx-error/</link>
       <pubDate>Fri, 28 Oct 2022 17:02:51 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/nginx-error/</guid>
-      <description>Untuk mengatasi error nginx seperti dibawah ini
-nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
-Jalankan perintah berikut
-sudo fuser -k 80/tcp service nginx start Semoga aman servermu :))</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://images.unsplash.com/photo-1625258110620-b213f56b9267?ixlib=rb-4.0.3&amp;amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGVtZXJnZW5jeXxlbnwwfHwwfHw%3D&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=400&amp;amp;q=60&#34; alt=&#34;Emergency&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Untuk mengatasi error nginx seperti dibawah ini&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Jalankan perintah berikut&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo fuser -k 80/tcp&#xA;&#xA;service nginx start&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Semoga aman servermu :))&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Cara Menjalankan Python File Menggunakan Gunicorn</title>
       <link>https://yuswitayudi.github.io/posts/cara-run-python-gunicorn/</link>
       <pubDate>Mon, 17 Oct 2022 11:27:29 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/cara-run-python-gunicorn/</guid>
-      <description>entah kenapa saya nyari gambar di freepik kebanyakan muncul itu, yaudahlahyaaa.
-Ini adalah cara menjalankan file python menggunakan gunicorn. Pada contoh ini misal kita memilik api server dari file python dengan nama api_flask.py
-Maka cara menjalankannya adalah seperti ini:
-gunicorn --bind 0.0.0.0:5000 api_flask:app -w 2 --log-config logging.ini --access-logfile - keterangan:
-api_flask = nama file python yg akan dijalankan. nama asli api_flask.py
--w = workers yang akan dijalankan.
--—log-config = file log config yang akan digunakan untuk logging gunicorn.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/marabou-stork-bird-closeup-head-with-natural-background_488145-1161.jpg?w=1380&amp;amp;t=st=1667445952~exp=1667446552~hmac=fad6ae320097c71e87b13dfb720e25a7f3a34c8a2d52de2a5ac1b3ebfd2bee72&#34; alt=&#34;gunicorn&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;entah kenapa saya nyari gambar di freepik kebanyakan muncul itu, yaudahlahyaaa.&lt;/p&gt;&#xA;&lt;p&gt;Ini adalah cara menjalankan file python menggunakan gunicorn. Pada contoh ini misal kita memilik api server dari file python dengan nama &lt;code&gt;api_flask.py&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Maka cara menjalankannya adalah seperti ini:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gunicorn --bind 0.0.0.0:5000 api_flask:app -w 2 --log-config logging.ini --access-logfile -&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;keterangan:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;api_flask = nama file python yg akan dijalankan. nama asli &lt;code&gt;api_flask.py&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;-w = workers yang akan dijalankan.&lt;/p&gt;&#xA;&lt;p&gt;-—log-config = file log config yang akan digunakan untuk logging gunicorn.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Perbedaan Stateless dan Statefull pada Kubernetes</title>
       <link>https://yuswitayudi.github.io/posts/statefuld-stateless/</link>
       <pubDate>Wed, 12 Oct 2022 17:25:04 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/statefuld-stateless/</guid>
-      <description>Nahhh Mengapa perlu ada catatan ini? ya karena memang saya bingung dan harus mencari tahu sendiri apa berbedaanya. Kan nggak lucu dong hanya karena sering melihat tapi tidak tahu persis apa konsep yang sebenarnya terjadi. wkkkk
-Sebelum mengetahui perbedaan Stateless dan Statefullset pada kubernetes, urutan yang perlu kita pahami adalah mengetahui aplikasi stateless dan statefull terlebih dahulu, dan ini perbedaanya teng tenggg
-Aplikasi Stateless Aplikasi Statefull Digunakan untuk request baru.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-vector/flat-versus-vs-banner-screen-design_1017-32319.jpg?w=1480&amp;amp;t=st=1667445851~exp=1667446451~hmac=282bbd60a75f0cff58d4115c2243ef57e0805a6054432df853157ac9330c556d&#34; alt=&#34;Perbandingan&#34;&gt;&#xA;Nahhh&#xA;Mengapa perlu ada catatan ini? ya karena memang saya bingung dan harus mencari tahu sendiri apa berbedaanya. Kan nggak lucu dong hanya karena sering melihat tapi tidak tahu persis apa konsep yang sebenarnya terjadi. wkkkk&lt;/p&gt;&#xA;&lt;p&gt;Sebelum mengetahui perbedaan Stateless dan Statefullset pada kubernetes, urutan yang perlu kita pahami adalah mengetahui aplikasi stateless dan statefull terlebih dahulu, dan ini perbedaanya teng tenggg&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Aplikasi Stateless&lt;/th&gt;&#xA;          &lt;th&gt;Aplikasi Statefull&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Digunakan untuk request baru. Ex: Aplikasi backend dari nodejs&lt;/td&gt;&#xA;          &lt;td&gt;Digunakan untuk menyimpan data. Ex: mysql&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Tidak menyimpanpan state sebelumnya&lt;/td&gt;&#xA;          &lt;td&gt;Menyimpan state sebelumnya&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Deploy di kubernetes mengunakan mode deployment&lt;/td&gt;&#xA;          &lt;td&gt;Deploy di kubernetes menggunakan mode statefullset&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;Setelah mengetahui perbadaan basic dari masing-masing aplikasi tersebut, harusnya sudah ada gambaran lah ya.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Membuat Domain pada Kubernetes menjadi HTTPS menggunakan cert-manager</title>
       <link>https://yuswitayudi.github.io/posts/membuat-https-dengan-cert-manager/</link>
       <pubDate>Tue, 27 Sep 2022 11:23:19 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/membuat-https-dengan-cert-manager/</guid>
-      <description>Nahhh
-Kali ini catatan yang menurut saya agak banyak langkah, tanpa basa basi please welcome Membuat Domain pada Kubernetes menjadi HTTPS menggunakan cert-manager. Ada 2 bagian yang perlu diperhatikan
-ingress cert-manager Ingress Pertama kita perlu menginstall ingress pada cluster k8s terlebih dahulu, untuk metode installnya bisa menggunakan helm atau jika kita menggunakan digitalocean bisa menggunakan fitur Install Kubernetes 1-Click Apps. Install ingress melalui helm:
-helm upgrade --install ingress-nginx ingress-nginx \ --repo https://kubernetes.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?ixlib=rb-4.0.3&amp;amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1632&amp;amp;q=80&#34; alt=&#34;Certmanager&#34;&gt;&#xA;Nahhh&lt;/p&gt;&#xA;&lt;p&gt;Kali ini catatan yang menurut saya agak banyak langkah, tanpa basa basi please welcome &lt;code&gt;Membuat Domain pada Kubernetes menjadi HTTPS menggunakan cert-manager&lt;/code&gt;. Ada 2 bagian yang perlu diperhatikan&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;ingress&lt;/li&gt;&#xA;&lt;li&gt;cert-manager&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;ingress&#34;&gt;Ingress&lt;/h2&gt;&#xA;&lt;p&gt;Pertama kita perlu menginstall ingress pada cluster k8s terlebih dahulu, untuk metode installnya bisa menggunakan helm atau jika kita menggunakan digitalocean bisa menggunakan fitur Install Kubernetes 1-Click Apps.&#xA;Install ingress melalui helm:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;helm upgrade --install ingress-nginx ingress-nginx \&#xA;  --repo https://kubernetes.github.io/ingress-nginx \&#xA;  --namespace ingress-nginx --create-namespace&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;cert-manager&#34;&gt;Cert-Manager&lt;/h2&gt;&#xA;&lt;p&gt;Sama halnya dengan Ingress jika kita menggunakan DO bisa menginstall melalui Install Kubernetes 1-Click Apps. Jika menginstall melalui helm berikut perintahnya&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Membuat RBAC(Role Based Access Control) user pada kubernetes</title>
       <link>https://yuswitayudi.github.io/posts/rbac-untuk-user/</link>
       <pubDate>Mon, 26 Sep 2022 10:20:10 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/rbac-untuk-user/</guid>
-      <description>Saya berharap untuk yang membaca ini berarti sedikit banyak sudah mengetahui tentang kubernetes (k8s), apabila belum tahu yaaa nggak papa juga sih. :D
-Utuk kali ini yang ingin saya tulis tentang RBAC adalah:
-cara membuat user untuk mengakses kubernetes membuat role untuk user membuat rolebinding untuk user membatasi user untuk mengakses namespace tertentu Pertama | Membuat user kubernetes Pada dasarnya ketika kita setup sebuah cluster kubernetes ada beberapa cara untuk mengakses cluster menggunakan kubectl, salah satunya menggunakan certificates/ssl.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-vector/people-house-entrance-enter-exit-home-vector-flat-illustration-happy-characters-open-door-lock-with-key-taking-out-trash-leaving-apartment-come-back-from-shopping_107791-11723.jpg?w=1380&amp;amp;t=st=1667445669~exp=1667446269~hmac=1745cb897be214793bc9c968706867ecc6ca79217d445e1d1e37b2bb9fa4d6e1&#34; alt=&#34;RBAC&#34;&gt;&#xA;Saya berharap untuk yang membaca ini berarti sedikit banyak sudah mengetahui tentang kubernetes (k8s), apabila belum tahu yaaa nggak papa juga sih. :D&lt;/p&gt;&#xA;&lt;p&gt;Utuk kali ini yang ingin saya tulis tentang RBAC adalah:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;cara membuat user untuk mengakses kubernetes&lt;/li&gt;&#xA;&lt;li&gt;membuat role untuk user&lt;/li&gt;&#xA;&lt;li&gt;membuat rolebinding untuk user&lt;/li&gt;&#xA;&lt;li&gt;membatasi user untuk mengakses namespace tertentu&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;pertama--membuat-user-kubernetes&#34;&gt;Pertama | Membuat user kubernetes&lt;/h2&gt;&#xA;&lt;p&gt;Pada dasarnya ketika kita setup sebuah cluster kubernetes ada beberapa cara untuk mengakses cluster menggunakan kubectl, salah satunya menggunakan certificates/ssl. Nah untuk kali ini kita membuat user yang menggunakan certificate. Langkah pertama adalah generate rsa, supaya menggampangkan gambaran untuk kali ini nama usernya adalah &lt;code&gt;yudi&lt;/code&gt; jadi sesuaikan jika akan diubah.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Hal-hal yang perlu diperhatikan untuk menerapkan Zero Downtime pada k8s</title>
       <link>https://yuswitayudi.github.io/posts/zerodowntime-deployment-k8s/</link>
       <pubDate>Tue, 20 Sep 2022 10:05:59 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/zerodowntime-deployment-k8s/</guid>
-      <description>Okee, untuk kali ini catatan yang akan ditulis adalah mengenai hal-hal apa yang perlu diperhatikan ketika menerapkan Zero Downtime pada kubernetes.
-Pertama | ReplicaSets Menentukan ReplicaSets pada jumlah batas minimum, yaitu 3. Kenapa demikian? Ini dikarenakan jika suatu saat ada pods kita yang crash kita masih memiliki pods yang lain yang masih berjalan.
-Links terkait ReplicaSets
-Kedua | podAntiAffinity Bayangkan apabila anda memiliki 3 replicasets, akan tetapi semuanya berada pada 1 node dan node itu tidak bisa diakses.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/vintage-clock_74190-1472.jpg?w=1380&amp;amp;t=st=1667445622~exp=1667446222~hmac=f3b9a7a6ccf03d5d05613b3f08a9c42028833518cb6a756e0c753854fa7cb84f&#34; alt=&#34;Zero Downtime&#34;&gt;&#xA;Okee, untuk kali ini catatan yang akan ditulis adalah mengenai hal-hal apa yang perlu diperhatikan ketika menerapkan Zero Downtime pada kubernetes.&lt;/p&gt;&#xA;&lt;h2 id=&#34;pertama--replicasets&#34;&gt;Pertama | ReplicaSets&lt;/h2&gt;&#xA;&lt;p&gt;Menentukan ReplicaSets pada jumlah batas minimum, yaitu 3. Kenapa demikian? Ini dikarenakan jika suatu saat ada pods kita yang crash kita masih memiliki pods yang lain yang masih berjalan.&lt;/p&gt;&#xA;&lt;p&gt;Links terkait &lt;a href=&#34;https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/&#34;&gt;ReplicaSets&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;kedua--podantiaffinity&#34;&gt;Kedua | podAntiAffinity&lt;/h2&gt;&#xA;&lt;p&gt;Bayangkan apabila anda memiliki 3 replicasets, akan tetapi semuanya berada pada 1 node dan node itu tidak bisa diakses. Maka semua service tidak bisa diakses juga, maka butuh yang namanya &amp;ldquo;podAntiAffinity&amp;rdquo; yang berguna untuk melakukan pemasangan pod sesuai dengan rule yang sudah kita tentukan.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Cara posting menggunakan hugo</title>
       <link>https://yuswitayudi.github.io/posts/cara-posting/</link>
       <pubDate>Fri, 01 Jul 2022 14:26:37 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/cara-posting/</guid>
-      <description>Ini adalah langkah Posting menggunakan hugo Buat file markdown baru hugo new posts/nama_file.md Edit file postingan sesuai kesukaanmu Buat file deploy.sh untuk otomatisasi push code dan deploy pada github.io #!/bin/bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Generate file statis hugo # if using a theme, replace by `hugo -t &amp;lt;yourtheme&amp;gt;` # pindah ke direktoru publik cd public # tambahkan perubahan ke Git git add -A # Buat sebuah commit baru msg=&amp;#34;rebuilding site `date`&amp;#34; if [ $# -eq 1 ] then msg=&amp;#34;$1&amp;#34; fi git commit -m &amp;#34;$msg&amp;#34; # Push atau puload ke Github git push origin master # Balik ke direktori sebelumnya cd .</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&amp;amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1472&amp;amp;q=80&#34; alt=&#34;alt text&#34; title=&#34;Title&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;ini-adalah-langkah-posting-menggunakan-hugo&#34;&gt;Ini adalah langkah Posting menggunakan hugo&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Buat file markdown baru&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo new posts/nama_file.md&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&#xA;&lt;li&gt;Edit file postingan sesuai kesukaanmu&lt;/li&gt;&#xA;&lt;li&gt;Buat file &lt;code&gt;deploy.sh&lt;/code&gt; untuk otomatisasi push code dan deploy pada github.io&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/bash&#xA;&#xA;echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34;&#xA;&#xA;# Generate file statis&#xA;hugo # if using a theme, replace by `hugo -t &amp;lt;yourtheme&amp;gt;`&#xA;&#xA;# pindah ke direktoru publik&#xA;cd public&#xA;# tambahkan perubahan ke Git&#xA;git add -A&#xA;&#xA;# Buat sebuah commit baru&#xA;msg=&amp;#34;rebuilding site `date`&amp;#34;&#xA;if [ $# -eq 1 ]&#xA;  then msg=&amp;#34;$1&amp;#34;&#xA;fi&#xA;git commit -m &amp;#34;$msg&amp;#34;&#xA;&#xA;# Push atau puload ke Github&#xA;git push origin master&#xA;&#xA;# Balik ke direktori sebelumnya&#xA;cd ..&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Sesuaikan branch jika anda menggunakan branch selain &lt;code&gt;master&lt;/code&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Intro</title>
       <link>https://yuswitayudi.github.io/posts/intro/</link>
       <pubDate>Thu, 16 Jun 2022 16:48:56 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/intro/</guid>
-      <description>Sebenernya ini reset halaman sih.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-vector/realistic-single-silver-microphone-retro-design-with-black-switch_1284-33542.jpg?w=900&amp;amp;t=st=1667445579~exp=1667446179~hmac=19355961a0a9fd3a9b3cf81de2ad42cd5ac3509250cf252e637361a3d88413dc&#34; alt=&#34;Ini Intro&#34;&gt;&#xA;Sebenernya ini reset halaman sih.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

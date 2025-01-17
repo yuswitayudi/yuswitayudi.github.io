@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Slack on AWNESIA</title>
     <link>https://yuswitayudi.github.io/tags/slack/</link>
     <description>Recent content in Slack on AWNESIA</description>
-    <image>
-      <title>AWNESIA</title>
-      <url>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 23 Dec 2022 14:52:05 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/tags/slack/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Dec 2022 14:52:05 +0700</lastBuildDate>
+    <atom:link href="https://yuswitayudi.github.io/tags/slack/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Botkube and Slack to Monitor and Notification</title>
       <link>https://yuswitayudi.github.io/posts/botkube-and-slack/</link>
       <pubDate>Fri, 23 Dec 2022 14:52:05 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/botkube-and-slack/</guid>
-      <description>Botkube is one of the best tool opensource I know, this very simple to install and useful. The mechanism is Botkube need token to connect each other with slack. So the first thing we need to install app on slack to configure collaborate with botkube. Actually documentation of botkube is helpull and complete, but you know this is not tutorial page :)). I just want to keep in my notes if in anytime I need.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/hands-holding-puzzle-business-problem-solving-concept_53876-129016.jpg?w=826&amp;amp;t=st=1671834901~exp=1671835501~hmac=d3b2f497fb6ee4ba2aa335e08579bc27d600c92e383e68b5fa61fd4bd7a368b4&#34; alt=&#34;botkube&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Botkube is one of the best tool opensource I know, this very simple to install and useful. The mechanism is Botkube need token to connect each other with slack. So the first thing we need to install app on slack to configure collaborate with botkube. Actually documentation of botkube is helpull and complete, but you know this is not tutorial page :)). I just want to keep in my &lt;a href=&#34;https://yuswitayudi.github.io/posts/&#34;&gt;notes&lt;/a&gt; if in  anytime I need.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

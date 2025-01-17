@@ -1,28 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on AWNESIA</title>
     <link>https://yuswitayudi.github.io/tags/linux/</link>
     <description>Recent content in Linux on AWNESIA</description>
-    <image>
-      <title>AWNESIA</title>
-      <url>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 28 Oct 2022 17:02:51 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Oct 2022 17:02:51 +0700</lastBuildDate>
+    <atom:link href="https://yuswitayudi.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)</title>
       <link>https://yuswitayudi.github.io/posts/nginx-error/</link>
       <pubDate>Fri, 28 Oct 2022 17:02:51 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/nginx-error/</guid>
-      <description>Untuk mengatasi error nginx seperti dibawah ini
-nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
-Jalankan perintah berikut
-sudo fuser -k 80/tcp service nginx start Semoga aman servermu :))</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://images.unsplash.com/photo-1625258110620-b213f56b9267?ixlib=rb-4.0.3&amp;amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGVtZXJnZW5jeXxlbnwwfHwwfHw%3D&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=400&amp;amp;q=60&#34; alt=&#34;Emergency&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Untuk mengatasi error nginx seperti dibawah ini&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Jalankan perintah berikut&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo fuser -k 80/tcp&#xA;&#xA;service nginx start&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Semoga aman servermu :))&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

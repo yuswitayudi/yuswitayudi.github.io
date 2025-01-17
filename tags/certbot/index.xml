@@ -1,40 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Certbot on AWNESIA</title>
     <link>https://yuswitayudi.github.io/tags/certbot/</link>
     <description>Recent content in Certbot on AWNESIA</description>
-    <image>
-      <title>AWNESIA</title>
-      <url>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://yuswitayudi.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Dec 2022 14:51:57 +0700</lastBuildDate><atom:link href="https://yuswitayudi.github.io/tags/certbot/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Dec 2022 14:51:57 +0700</lastBuildDate>
+    <atom:link href="https://yuswitayudi.github.io/tags/certbot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create SSL Nginx with Ansible</title>
       <link>https://yuswitayudi.github.io/posts/ansible-create-https/</link>
       <pubDate>Wed, 14 Dec 2022 14:51:57 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/ansible-create-https/</guid>
-      <description>This is maybe one of the longest notes in this notes. Here we go&amp;hellip;.
-First before I meet this ansible roles, when I want to deploy domain name with nginx server. I only install and deploy ssl to manage HTTPS certbot with manually installation which is use standard command line. This is very repetitive and there will be chances human error.
-requirements:
-nginx ansible-playbook ssh connection So when I feel I can be better than it, I decide to use ansible to create repetitive task.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/infrastructure-bridge_1127-2226.jpg?w=1380&amp;amp;t=st=1669198797~exp=1669199397~hmac=f55619eceb4191fb043a3ca8fe30cd9d2bbffc8f296b1924eaa5e4131502e7aa&#34; alt=&#34;multiple way&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This is maybe one of the longest notes in this notes. Here we go&amp;hellip;.&lt;/p&gt;&#xA;&lt;p&gt;First before I meet this ansible roles, when I want to deploy domain name with nginx server. I only install and deploy ssl to manage HTTPS certbot with manually installation which is use standard command line. This is very repetitive and there will be chances human error.&lt;/p&gt;&#xA;&lt;p&gt;requirements:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;nginx&lt;/li&gt;&#xA;&lt;li&gt;ansible-playbook&lt;/li&gt;&#xA;&lt;li&gt;ssh connection&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;So when I feel I can be better than it, I decide to use ansible to create repetitive task. And after the long way I create this ansible roles:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Generate SSL from DNS challanges with certbot</title>
       <link>https://yuswitayudi.github.io/posts/generate-ssl-dns/</link>
       <pubDate>Thu, 03 Nov 2022 09:32:15 +0700</pubDate>
-      
       <guid>https://yuswitayudi.github.io/posts/generate-ssl-dns/</guid>
-      <description>In this notes I will write on English, I just learn and get used to English.
-First thing first this my notes with Cloudflare domain management.
-Let&amp;rsquo;s start, I have problem to generate ssl on local network. Because local network don&amp;rsquo;t have public IP to be called from certbot, to authenticate that domain is valid.
-So from my boss I have knowledge to solve the problem with generate certificate from certbot with authenticate challange with DNS.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/premium-photo/https-encryption-improve-security-https-concept-with-search-sign-checkmark_507676-606.jpg?w=1800&#34; alt=&#34;SSL&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In this &lt;a href=&#34;https://yuswitayudi.github.io&#34;&gt;notes&lt;/a&gt; I will write on English, I just learn and get used to English.&lt;/p&gt;&#xA;&lt;p&gt;First thing first this my &lt;a href=&#34;https://yuswitayudi.github.io&#34;&gt;notes&lt;/a&gt; with &lt;strong&gt;Cloudflare&lt;/strong&gt; domain management.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s start, I have problem to generate ssl on local network. Because local network don&amp;rsquo;t have public IP to be called from certbot, to authenticate that domain is valid.&lt;/p&gt;&#xA;&lt;p&gt;So from &lt;a href=&#34;https://linggar.asia/&#34;&gt;my boss&lt;/a&gt; I have knowledge to solve the problem with generate certificate from certbot with authenticate challange with DNS.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
