@@ -6,8 +6,15 @@
     <description>Recent content in Kubernetes on AWNESIA</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Jan 2023 20:25:39 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jan 2025 17:59:11 +0700</lastBuildDate>
     <atom:link href="https://yuswitayudi.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Initial Delay Kubernetes</title>
+      <link>https://yuswitayudi.github.io/posts/initial-delay-kubernetes/</link>
+      <pubDate>Fri, 17 Jan 2025 17:59:11 +0700</pubDate>
+      <guid>https://yuswitayudi.github.io/posts/initial-delay-kubernetes/</guid>
+      <description>&lt;h3 id=&#34;why-initial-delay-seconds-matter-in-kubernetes&#34;&gt;Why Initial Delay Seconds Matter in Kubernetes&lt;/h3&gt;&#xA;&lt;p&gt;Hello, everyone! Long time no see huh. Today, I want to talk about a small but important feature in Kubernetes: &lt;strong&gt;initialDelaySeconds&lt;/strong&gt;. It’s one of those settings that can save you from a lot of headaches if you understand and use it correctly.&lt;/p&gt;&#xA;&lt;h4 id=&#34;what-is-initialdelayseconds&#34;&gt;What is &lt;code&gt;initialDelaySeconds&lt;/code&gt;?&lt;/h4&gt;&#xA;&lt;p&gt;When deploying an application in Kubernetes, you’ll often define liveness and readiness probes. These probes are used by Kubernetes to check if your application is healthy and ready to serve traffic.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How to connect AWS eks from kubectl</title>
       <link>https://yuswitayudi.github.io/posts/aws-kubeconfig/</link>
