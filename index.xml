@@ -6,8 +6,15 @@
     <description>Recent content on AWNESIA</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Jan 2025 17:59:11 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 11 Feb 2025 10:51:22 +0700</lastBuildDate>
     <atom:link href="https://yuswitayudi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Login Google cloud witch CLI</title>
+      <link>https://yuswitayudi.github.io/posts/login-gcloud/</link>
+      <pubDate>Tue, 11 Feb 2025 10:51:22 +0700</pubDate>
+      <guid>https://yuswitayudi.github.io/posts/login-gcloud/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-vector/digital-marketing-icons-pack_1114-59.jpg?t=st=1739245925~exp=1739249525~hmac=660754e40a6078466b39fee2640234e24190bef4ebeccde017dc1e6c43230cb1&amp;amp;w=826&#34; alt=&#34;gcloud&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;how-to-login-to-google-cloud-using-the-command-line-cli&#34;&gt;How to Login to Google Cloud Using the Command Line (CLI)&lt;/h3&gt;&#xA;&lt;p&gt;Hey everyone! Welcome back to my blog at &lt;a href=&#34;https://yuswitayudi.github.io&#34;&gt;yuswitayudi.github.io&lt;/a&gt;. Today, I’m going to walk through how to log in to Google Cloud using the command line. If you’re managing cloud resources, using the CLI can save a lot of time and make things more efficient.&lt;/p&gt;&#xA;&lt;h4 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h4&gt;&#xA;&lt;p&gt;Before starting, make sure you have:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A Google Cloud account&lt;/li&gt;&#xA;&lt;li&gt;Google Cloud SDK installed on your system&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;you just need run this if you are  linux based sudo snap install google-cloud-cli --classic&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If Google Cloud SDK isn’t installed yet, follow &lt;a href=&#34;https://cloud.google.com/sdk/docs/install&#34;&gt;this guide&lt;/a&gt; to set it up.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Initial Delay Kubernetes</title>
       <link>https://yuswitayudi.github.io/posts/initial-delay-kubernetes/</link>
