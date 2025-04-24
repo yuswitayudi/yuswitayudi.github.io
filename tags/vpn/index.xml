@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>VPN on AWNESIA</title>
-    <link>https://yuswitayudi.github.io/tags/vpn/</link>
+    <link>https://yuswitayudi.site/tags/vpn/</link>
     <description>Recent content in VPN on AWNESIA</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 10 Nov 2022 15:39:17 +0700</lastBuildDate>
-    <atom:link href="https://yuswitayudi.github.io/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yuswitayudi.site/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Change Subnet IP on OpenVPN Docker</title>
-      <link>https://yuswitayudi.github.io/posts/change-subnet/</link>
+      <link>https://yuswitayudi.site/posts/change-subnet/</link>
       <pubDate>Thu, 10 Nov 2022 15:39:17 +0700</pubDate>
-      <guid>https://yuswitayudi.github.io/posts/change-subnet/</guid>
+      <guid>https://yuswitayudi.site/posts/change-subnet/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/walls-apartment-is-construction-remodeling-renovation-extension-restoration-reconstruction_493343-29444.jpg?w=1380&amp;amp;t=st=1668069749~exp=1668070349~hmac=554ede8dc03392689097aa21dd2e62624e30956a0bd2b8a771fbbd6733eef658&#34; alt=&#34;openvpn&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In another case we already setup openvpn with docker, and we want to change IP Address of vpn network. How we do it? But if you interest how to setup openvpn you just only visit this &lt;a href=&#34;https://github.com/kylemanna/docker-openvpn&#34;&gt;github repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;In my case I already setup IP on 192.168.x.x but at one time we use that IP on wifi/router local. So that IP not work to access. To generate new IP we must generate new &lt;strong&gt;openvpn.conf&lt;/strong&gt; and specify the IP Address&lt;/p&gt;</description>
     </item>
   </channel>

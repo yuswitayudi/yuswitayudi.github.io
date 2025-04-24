@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docker on AWNESIA</title>
-    <link>https://yuswitayudi.github.io/tags/docker/</link>
+    <link>https://yuswitayudi.site/tags/docker/</link>
     <description>Recent content in Docker on AWNESIA</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 24 Nov 2022 16:09:01 +0700</lastBuildDate>
-    <atom:link href="https://yuswitayudi.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yuswitayudi.site/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mengganti Ukuran Log Docker Container</title>
-      <link>https://yuswitayudi.github.io/posts/mengganti-log-size/</link>
+      <link>https://yuswitayudi.site/posts/mengganti-log-size/</link>
       <pubDate>Thu, 24 Nov 2022 16:09:01 +0700</pubDate>
-      <guid>https://yuswitayudi.github.io/posts/mengganti-log-size/</guid>
+      <guid>https://yuswitayudi.site/posts/mengganti-log-size/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/vintage-tailor-ruler-isolated-down-part-aged-wooden-table_346278-918.jpg?w=1380&amp;amp;t=st=1669281043~exp=1669281643~hmac=cf874a267123fad2f648bda388d90fb2f41d1940869263dc9bcdeb2e78c70e6f&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Ukuran log yang besar pasti suatu saat akan membuatmu mikir-mikir tentang disk kan. Nah untuk itu kita perlu mengatur berapa ukuran yang ada pada docker container. Ini dijalankan dengan docker-compose maupun docker container.&lt;/p&gt;&#xA;&lt;h3 id=&#34;docker-compose&#34;&gt;Docker compose&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;version: &amp;#39;3&amp;#39;&#xA;services:&#xA;  nginx:&#xA;    image: nginx:latest&#xA;    hostname: ubuntu&#xA;    logging:&#xA;     options:&#xA;       tag: &amp;#34;{{.Name}}&amp;#34;&#xA;       max-size: 50m&#xA;    labels:&#xA;      - &amp;#34;autoheal=true&amp;#34;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;docker-container&#34;&gt;Docker container&lt;/h3&gt;&#xA;&lt;p&gt;&lt;code&gt;docker run -d --name nginx --log-opt max-size=50m&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Dari kedua cara diatas akan membatasi log ke ukuran 50 megabytes saja. Oiya tambahan di file docker-compose diatas terdapat label untuk autoheal, itu digunakan untuk membuat container baru ketika container statusnya sudah &lt;code&gt;unhealthy&lt;/code&gt;. Sumber bisa baca disini &lt;a href=&#34;https://hub.docker.com/r/willfarrell/autoheal/&#34;&gt;https://hub.docker.com/r/willfarrell/autoheal/&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Change Subnet IP on OpenVPN Docker</title>
-      <link>https://yuswitayudi.github.io/posts/change-subnet/</link>
+      <link>https://yuswitayudi.site/posts/change-subnet/</link>
       <pubDate>Thu, 10 Nov 2022 15:39:17 +0700</pubDate>
-      <guid>https://yuswitayudi.github.io/posts/change-subnet/</guid>
+      <guid>https://yuswitayudi.site/posts/change-subnet/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/walls-apartment-is-construction-remodeling-renovation-extension-restoration-reconstruction_493343-29444.jpg?w=1380&amp;amp;t=st=1668069749~exp=1668070349~hmac=554ede8dc03392689097aa21dd2e62624e30956a0bd2b8a771fbbd6733eef658&#34; alt=&#34;openvpn&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In another case we already setup openvpn with docker, and we want to change IP Address of vpn network. How we do it? But if you interest how to setup openvpn you just only visit this &lt;a href=&#34;https://github.com/kylemanna/docker-openvpn&#34;&gt;github repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;In my case I already setup IP on 192.168.x.x but at one time we use that IP on wifi/router local. So that IP not work to access. To generate new IP we must generate new &lt;strong&gt;openvpn.conf&lt;/strong&gt; and specify the IP Address&lt;/p&gt;</description>
     </item>
   </channel>

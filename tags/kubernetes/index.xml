@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubernetes on AWNESIA</title>
-    <link>https://yuswitayudi.github.io/tags/kubernetes/</link>
+    <link>https://yuswitayudi.site/tags/kubernetes/</link>
     <description>Recent content in Kubernetes on AWNESIA</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 17 Jan 2025 17:59:11 +0700</lastBuildDate>
-    <atom:link href="https://yuswitayudi.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yuswitayudi.site/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Initial Delay Kubernetes</title>
-      <link>https://yuswitayudi.github.io/posts/initial-delay-kubernetes/</link>
+      <link>https://yuswitayudi.site/posts/initial-delay-kubernetes/</link>
       <pubDate>Fri, 17 Jan 2025 17:59:11 +0700</pubDate>
-      <guid>https://yuswitayudi.github.io/posts/initial-delay-kubernetes/</guid>
+      <guid>https://yuswitayudi.site/posts/initial-delay-kubernetes/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/clock-is-ticking-time-management-concept-with-clock-gray-background-top-view-hands-holding-magnifier-horizontal-image_176474-6600.jpg?t=st=1737111756~exp=1737115356~hmac=643f6fb022880aab9d056bc50f1deecc4f03fd09034b8e922cde1cf9a4498a77&amp;amp;w=1380&#34; alt=&#34;timing&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;why-initial-delay-seconds-matter-in-kubernetes&#34;&gt;Why Initial Delay Seconds Matter in Kubernetes&lt;/h3&gt;&#xA;&lt;p&gt;Hello, everyone! Long time no see huh. Today, I want to talk about a small but important feature in Kubernetes: &lt;strong&gt;initialDelaySeconds&lt;/strong&gt;. It’s one of those settings that can save you from a lot of headaches if you understand and use it correctly.&lt;/p&gt;&#xA;&lt;h4 id=&#34;what-is-initialdelayseconds&#34;&gt;What is &lt;code&gt;initialDelaySeconds&lt;/code&gt;?&lt;/h4&gt;&#xA;&lt;p&gt;When deploying an application in Kubernetes, you’ll often define liveness and readiness probes. These probes are used by Kubernetes to check if your application is healthy and ready to serve traffic.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to connect AWS eks from kubectl</title>
-      <link>https://yuswitayudi.github.io/posts/aws-kubeconfig/</link>
+      <link>https://yuswitayudi.site/posts/aws-kubeconfig/</link>
       <pubDate>Fri, 13 Jan 2023 20:25:39 +0700</pubDate>
-      <guid>https://yuswitayudi.github.io/posts/aws-kubeconfig/</guid>
+      <guid>https://yuswitayudi.site/posts/aws-kubeconfig/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/networking-concept-still-life-assortment_23-2149035669.jpg?w=900&amp;amp;t=st=1673616478~exp=1673617078~hmac=27e52e4009e468080a51d0c333ab5da2d7593782072ee7452b767563975b7b23&#34; alt=&#34;awskubernetes&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;By the way this is the new journey to handled cloud provider like AWS, with complexity because I don&amp;rsquo;t have many knowledge about that. Okay back to the topic.&lt;/p&gt;&#xA;&lt;p&gt;Requirement you must have:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AWS CLI&lt;/li&gt;&#xA;&lt;li&gt;kubectl&lt;/li&gt;&#xA;&lt;li&gt;access key and secret key AWS&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;For the first make sure you can access the AWS from aws CLI, run this command&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;aws eks list-cluster&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;if you dont have any default region, you can add with &lt;code&gt;--region&lt;/code&gt; parameter. Ex: &lt;code&gt;--region us-west-1&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Botkube and Slack to Monitor and Notification</title>
-      <link>https://yuswitayudi.github.io/posts/botkube-and-slack/</link>
+      <link>https://yuswitayudi.site/posts/botkube-and-slack/</link>
       <pubDate>Fri, 23 Dec 2022 14:52:05 +0700</pubDate>
-      <guid>https://yuswitayudi.github.io/posts/botkube-and-slack/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/hands-holding-puzzle-business-problem-solving-concept_53876-129016.jpg?w=826&amp;amp;t=st=1671834901~exp=1671835501~hmac=d3b2f497fb6ee4ba2aa335e08579bc27d600c92e383e68b5fa61fd4bd7a368b4&#34; alt=&#34;botkube&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Botkube is one of the best tool opensource I know, this very simple to install and useful. The mechanism is Botkube need token to connect each other with slack. So the first thing we need to install app on slack to configure collaborate with botkube. Actually documentation of botkube is helpull and complete, but you know this is not tutorial page :)). I just want to keep in my &lt;a href=&#34;https://yuswitayudi.github.io/posts/&#34;&gt;notes&lt;/a&gt; if in  anytime I need.&lt;/p&gt;</description>
+      <guid>https://yuswitayudi.site/posts/botkube-and-slack/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/hands-holding-puzzle-business-problem-solving-concept_53876-129016.jpg?w=826&amp;amp;t=st=1671834901~exp=1671835501~hmac=d3b2f497fb6ee4ba2aa335e08579bc27d600c92e383e68b5fa61fd4bd7a368b4&#34; alt=&#34;botkube&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Botkube is one of the best tool opensource I know, this very simple to install and useful. The mechanism is Botkube need token to connect each other with slack. So the first thing we need to install app on slack to configure collaborate with botkube. Actually documentation of botkube is helpull and complete, but you know this is not tutorial page :)). I just want to keep in my &lt;a href=&#34;https://yuswitayudi.site/posts/&#34;&gt;notes&lt;/a&gt; if in  anytime I need.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Menggunakan Skaffold untuk Kemudahan Development</title>
-      <link>https://yuswitayudi.github.io/posts/skaffold-simple/</link>
+      <link>https://yuswitayudi.site/posts/skaffold-simple/</link>
       <pubDate>Thu, 17 Nov 2022 11:14:46 +0700</pubDate>
-      <guid>https://yuswitayudi.github.io/posts/skaffold-simple/</guid>
+      <guid>https://yuswitayudi.site/posts/skaffold-simple/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/confident-company-manager-giving-working-tasks-diverse-teamworkers-analysing-paperwork-with-graphs-sitting-start-up-office_482257-5103.jpg?w=1380&amp;amp;t=st=1668658940~exp=1668659540~hmac=dfa40a521887a9fc24159d1b62b4dc1170389a4cc1c3d6e237c23f489dfcdf0b&#34; alt=&#34;New task&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Nahh&lt;/p&gt;&#xA;&lt;p&gt;Kali ini saya menulis tentang &lt;a href=&#34;https://skaffold.dev/&#34;&gt;skaffold&lt;/a&gt;, merupakan software development tool untuk membuat kinerja para developer yang melakukan repetitif menjadi mudah. Kenapa demikian? mari kita telisik dan telusuk.&lt;/p&gt;&#xA;&lt;p&gt;Pada umumnya seorang developer ketika mengerjakan suatu aplikasi, dia akan melakukan dan menjalankan di devicenya sendiri. Meskipun sudah menggunakan metode docker/container namun kadang masih terdapat perbedaan ketika sudah terdeploy pada server. Atau semisal ketika menjalankan sudah melakukan development pada kubernetes, pasti ada proses build image dan push ke registry dan hal tersebut sangat repetitif.&#xA;Pada kasus kali ini catatanya adalah:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Perbedaan Stateless dan Statefull pada Kubernetes</title>
-      <link>https://yuswitayudi.github.io/posts/statefuld-stateless/</link>
+      <link>https://yuswitayudi.site/posts/statefuld-stateless/</link>
       <pubDate>Wed, 12 Oct 2022 17:25:04 +0700</pubDate>
-      <guid>https://yuswitayudi.github.io/posts/statefuld-stateless/</guid>
+      <guid>https://yuswitayudi.site/posts/statefuld-stateless/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-vector/flat-versus-vs-banner-screen-design_1017-32319.jpg?w=1480&amp;amp;t=st=1667445851~exp=1667446451~hmac=282bbd60a75f0cff58d4115c2243ef57e0805a6054432df853157ac9330c556d&#34; alt=&#34;Perbandingan&#34;&gt;&#xA;Nahhh&#xA;Mengapa perlu ada catatan ini? ya karena memang saya bingung dan harus mencari tahu sendiri apa berbedaanya. Kan nggak lucu dong hanya karena sering melihat tapi tidak tahu persis apa konsep yang sebenarnya terjadi. wkkkk&lt;/p&gt;&#xA;&lt;p&gt;Sebelum mengetahui perbedaan Stateless dan Statefullset pada kubernetes, urutan yang perlu kita pahami adalah mengetahui aplikasi stateless dan statefull terlebih dahulu, dan ini perbedaanya teng tenggg&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Aplikasi Stateless&lt;/th&gt;&#xA;          &lt;th&gt;Aplikasi Statefull&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Digunakan untuk request baru. Ex: Aplikasi backend dari nodejs&lt;/td&gt;&#xA;          &lt;td&gt;Digunakan untuk menyimpan data. Ex: mysql&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Tidak menyimpanpan state sebelumnya&lt;/td&gt;&#xA;          &lt;td&gt;Menyimpan state sebelumnya&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Deploy di kubernetes mengunakan mode deployment&lt;/td&gt;&#xA;          &lt;td&gt;Deploy di kubernetes menggunakan mode statefullset&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;Setelah mengetahui perbadaan basic dari masing-masing aplikasi tersebut, harusnya sudah ada gambaran lah ya.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Membuat Domain pada Kubernetes menjadi HTTPS menggunakan cert-manager</title>
-      <link>https://yuswitayudi.github.io/posts/membuat-https-dengan-cert-manager/</link>
+      <link>https://yuswitayudi.site/posts/membuat-https-dengan-cert-manager/</link>
       <pubDate>Tue, 27 Sep 2022 11:23:19 +0700</pubDate>
-      <guid>https://yuswitayudi.github.io/posts/membuat-https-dengan-cert-manager/</guid>
+      <guid>https://yuswitayudi.site/posts/membuat-https-dengan-cert-manager/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?ixlib=rb-4.0.3&amp;amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1632&amp;amp;q=80&#34; alt=&#34;Certmanager&#34;&gt;&#xA;Nahhh&lt;/p&gt;&#xA;&lt;p&gt;Kali ini catatan yang menurut saya agak banyak langkah, tanpa basa basi please welcome &lt;code&gt;Membuat Domain pada Kubernetes menjadi HTTPS menggunakan cert-manager&lt;/code&gt;. Ada 2 bagian yang perlu diperhatikan&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;ingress&lt;/li&gt;&#xA;&lt;li&gt;cert-manager&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;ingress&#34;&gt;Ingress&lt;/h2&gt;&#xA;&lt;p&gt;Pertama kita perlu menginstall ingress pada cluster k8s terlebih dahulu, untuk metode installnya bisa menggunakan helm atau jika kita menggunakan digitalocean bisa menggunakan fitur Install Kubernetes 1-Click Apps.&#xA;Install ingress melalui helm:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;helm upgrade --install ingress-nginx ingress-nginx \&#xA;  --repo https://kubernetes.github.io/ingress-nginx \&#xA;  --namespace ingress-nginx --create-namespace&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;cert-manager&#34;&gt;Cert-Manager&lt;/h2&gt;&#xA;&lt;p&gt;Sama halnya dengan Ingress jika kita menggunakan DO bisa menginstall melalui Install Kubernetes 1-Click Apps. Jika menginstall melalui helm berikut perintahnya&lt;/p&gt;</description>
     </item>
     <item>
       <title>Membuat RBAC(Role Based Access Control) user pada kubernetes</title>
-      <link>https://yuswitayudi.github.io/posts/rbac-untuk-user/</link>
+      <link>https://yuswitayudi.site/posts/rbac-untuk-user/</link>
       <pubDate>Mon, 26 Sep 2022 10:20:10 +0700</pubDate>
-      <guid>https://yuswitayudi.github.io/posts/rbac-untuk-user/</guid>
+      <guid>https://yuswitayudi.site/posts/rbac-untuk-user/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-vector/people-house-entrance-enter-exit-home-vector-flat-illustration-happy-characters-open-door-lock-with-key-taking-out-trash-leaving-apartment-come-back-from-shopping_107791-11723.jpg?w=1380&amp;amp;t=st=1667445669~exp=1667446269~hmac=1745cb897be214793bc9c968706867ecc6ca79217d445e1d1e37b2bb9fa4d6e1&#34; alt=&#34;RBAC&#34;&gt;&#xA;Saya berharap untuk yang membaca ini berarti sedikit banyak sudah mengetahui tentang kubernetes (k8s), apabila belum tahu yaaa nggak papa juga sih. :D&lt;/p&gt;&#xA;&lt;p&gt;Utuk kali ini yang ingin saya tulis tentang RBAC adalah:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;cara membuat user untuk mengakses kubernetes&lt;/li&gt;&#xA;&lt;li&gt;membuat role untuk user&lt;/li&gt;&#xA;&lt;li&gt;membuat rolebinding untuk user&lt;/li&gt;&#xA;&lt;li&gt;membatasi user untuk mengakses namespace tertentu&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;pertama--membuat-user-kubernetes&#34;&gt;Pertama | Membuat user kubernetes&lt;/h2&gt;&#xA;&lt;p&gt;Pada dasarnya ketika kita setup sebuah cluster kubernetes ada beberapa cara untuk mengakses cluster menggunakan kubectl, salah satunya menggunakan certificates/ssl. Nah untuk kali ini kita membuat user yang menggunakan certificate. Langkah pertama adalah generate rsa, supaya menggampangkan gambaran untuk kali ini nama usernya adalah &lt;code&gt;yudi&lt;/code&gt; jadi sesuaikan jika akan diubah.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hal-hal yang perlu diperhatikan untuk menerapkan Zero Downtime pada k8s</title>
-      <link>https://yuswitayudi.github.io/posts/zerodowntime-deployment-k8s/</link>
+      <link>https://yuswitayudi.site/posts/zerodowntime-deployment-k8s/</link>
       <pubDate>Tue, 20 Sep 2022 10:05:59 +0700</pubDate>
-      <guid>https://yuswitayudi.github.io/posts/zerodowntime-deployment-k8s/</guid>
+      <guid>https://yuswitayudi.site/posts/zerodowntime-deployment-k8s/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/vintage-clock_74190-1472.jpg?w=1380&amp;amp;t=st=1667445622~exp=1667446222~hmac=f3b9a7a6ccf03d5d05613b3f08a9c42028833518cb6a756e0c753854fa7cb84f&#34; alt=&#34;Zero Downtime&#34;&gt;&#xA;Okee, untuk kali ini catatan yang akan ditulis adalah mengenai hal-hal apa yang perlu diperhatikan ketika menerapkan Zero Downtime pada kubernetes.&lt;/p&gt;&#xA;&lt;h2 id=&#34;pertama--replicasets&#34;&gt;Pertama | ReplicaSets&lt;/h2&gt;&#xA;&lt;p&gt;Menentukan ReplicaSets pada jumlah batas minimum, yaitu 3. Kenapa demikian? Ini dikarenakan jika suatu saat ada pods kita yang crash kita masih memiliki pods yang lain yang masih berjalan.&lt;/p&gt;&#xA;&lt;p&gt;Links terkait &lt;a href=&#34;https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/&#34;&gt;ReplicaSets&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;kedua--podantiaffinity&#34;&gt;Kedua | podAntiAffinity&lt;/h2&gt;&#xA;&lt;p&gt;Bayangkan apabila anda memiliki 3 replicasets, akan tetapi semuanya berada pada 1 node dan node itu tidak bisa diakses. Maka semua service tidak bisa diakses juga, maka butuh yang namanya &amp;ldquo;podAntiAffinity&amp;rdquo; yang berguna untuk melakukan pemasangan pod sesuai dengan rule yang sudah kita tentukan.&lt;/p&gt;</description>
     </item>
   </channel>

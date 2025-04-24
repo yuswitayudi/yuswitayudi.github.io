@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on AWNESIA</title>
-    <link>https://yuswitayudi.github.io/tags/python/</link>
+    <link>https://yuswitayudi.site/tags/python/</link>
     <description>Recent content in Python on AWNESIA</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 17 Oct 2022 11:27:29 +0700</lastBuildDate>
-    <atom:link href="https://yuswitayudi.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yuswitayudi.site/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cara Menjalankan Python File Menggunakan Gunicorn</title>
-      <link>https://yuswitayudi.github.io/posts/cara-run-python-gunicorn/</link>
+      <link>https://yuswitayudi.site/posts/cara-run-python-gunicorn/</link>
       <pubDate>Mon, 17 Oct 2022 11:27:29 +0700</pubDate>
-      <guid>https://yuswitayudi.github.io/posts/cara-run-python-gunicorn/</guid>
+      <guid>https://yuswitayudi.site/posts/cara-run-python-gunicorn/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/marabou-stork-bird-closeup-head-with-natural-background_488145-1161.jpg?w=1380&amp;amp;t=st=1667445952~exp=1667446552~hmac=fad6ae320097c71e87b13dfb720e25a7f3a34c8a2d52de2a5ac1b3ebfd2bee72&#34; alt=&#34;gunicorn&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;entah kenapa saya nyari gambar di freepik kebanyakan muncul itu, yaudahlahyaaa.&lt;/p&gt;&#xA;&lt;p&gt;Ini adalah cara menjalankan file python menggunakan gunicorn. Pada contoh ini misal kita memilik api server dari file python dengan nama &lt;code&gt;api_flask.py&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Maka cara menjalankannya adalah seperti ini:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gunicorn --bind 0.0.0.0:5000 api_flask:app -w 2 --log-config logging.ini --access-logfile -&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;keterangan:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;api_flask = nama file python yg akan dijalankan. nama asli &lt;code&gt;api_flask.py&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;-w = workers yang akan dijalankan.&lt;/p&gt;&#xA;&lt;p&gt;-—log-config = file log config yang akan digunakan untuk logging gunicorn.&lt;/p&gt;</description>
     </item>
   </channel>

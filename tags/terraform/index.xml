@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Terraform on AWNESIA</title>
-    <link>https://yuswitayudi.github.io/tags/terraform/</link>
+    <link>https://yuswitayudi.site/tags/terraform/</link>
     <description>Recent content in Terraform on AWNESIA</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 14 Nov 2022 13:16:46 +0700</lastBuildDate>
-    <atom:link href="https://yuswitayudi.github.io/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yuswitayudi.site/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Membuat Droplet pada DigitalOcean menggunakan Terraform</title>
-      <link>https://yuswitayudi.github.io/posts/terraform-digitalocean/</link>
+      <link>https://yuswitayudi.site/posts/terraform-digitalocean/</link>
       <pubDate>Mon, 14 Nov 2022 13:16:46 +0700</pubDate>
-      <guid>https://yuswitayudi.github.io/posts/terraform-digitalocean/</guid>
+      <guid>https://yuswitayudi.site/posts/terraform-digitalocean/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/premium-photo/bricklayer-industrial-worker-installing-brick-masonry-with-trowel-putty-knife-construction-site_33835-1135.jpg?w=1380&#34; alt=&#34;terraform&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Yaaa memang bukan suatu hal yang wah, sekali lagi diriku mengingatkan bahwa web ini hanya sekedar catatan biasa oleh &lt;a href=&#34;http://github.com/yuswitayudi&#34;&gt;Yudi&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;&#xA;&lt;p&gt;Sebenarnya membuat droplet pada DigitalOcean bisa sekali menggunakan Web UI melalui browser, akan tetapi jika suatu saat kita akan membuat droplet dengan jumlah yang banyak atau bisa dibilang repetitif dan dengan spesifikasi droplet yang sama. Maka butuh banyak klak klik klak klik oleh jari kita untuk bisa mencapai tujuan tersebut.&lt;/p&gt;</description>
     </item>
   </channel>

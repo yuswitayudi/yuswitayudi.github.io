@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aws on AWNESIA</title>
-    <link>https://yuswitayudi.github.io/tags/aws/</link>
+    <link>https://yuswitayudi.site/tags/aws/</link>
     <description>Recent content in Aws on AWNESIA</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 13 Jan 2023 20:25:39 +0700</lastBuildDate>
-    <atom:link href="https://yuswitayudi.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yuswitayudi.site/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to connect AWS eks from kubectl</title>
-      <link>https://yuswitayudi.github.io/posts/aws-kubeconfig/</link>
+      <link>https://yuswitayudi.site/posts/aws-kubeconfig/</link>
       <pubDate>Fri, 13 Jan 2023 20:25:39 +0700</pubDate>
-      <guid>https://yuswitayudi.github.io/posts/aws-kubeconfig/</guid>
+      <guid>https://yuswitayudi.site/posts/aws-kubeconfig/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://img.freepik.com/free-photo/networking-concept-still-life-assortment_23-2149035669.jpg?w=900&amp;amp;t=st=1673616478~exp=1673617078~hmac=27e52e4009e468080a51d0c333ab5da2d7593782072ee7452b767563975b7b23&#34; alt=&#34;awskubernetes&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;By the way this is the new journey to handled cloud provider like AWS, with complexity because I don&amp;rsquo;t have many knowledge about that. Okay back to the topic.&lt;/p&gt;&#xA;&lt;p&gt;Requirement you must have:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AWS CLI&lt;/li&gt;&#xA;&lt;li&gt;kubectl&lt;/li&gt;&#xA;&lt;li&gt;access key and secret key AWS&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;For the first make sure you can access the AWS from aws CLI, run this command&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;aws eks list-cluster&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;if you dont have any default region, you can add with &lt;code&gt;--region&lt;/code&gt; parameter. Ex: &lt;code&gt;--region us-west-1&lt;/code&gt;&lt;/p&gt;</description>
     </item>
   </channel>
