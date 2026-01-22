@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>About · AWNESIA</title><script>
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Membuat Droplet pada DigitalOcean menggunakan Terraform · AWNESIA</title><script>
       if (
         localStorage.getItem("color-theme") === "dark" ||
         (!("color-theme" in localStorage) &&
@@ -61,24 +61,43 @@
 
   // Run after every page swap (for View Transitions)
   document.addEventListener("astro:after-swap", initTheme);
-</script> </div> </header>  <article class="max-w-3xl mx-auto"> <header class="mb-12"> <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white italic underline decoration-blue-600 decoration-3">
-About Me
-</h1> <p class="text-slate-600 dark:text-slate-400 mt-4 text-lg md:text-xl leading-relaxed">
-DevOps Engineer, Jr. Site Reliability Engineer and Comedy Lover
-</p> </header> <div class="prose prose-slate lg:prose-xl max-w-none dark:prose-invert"> <p>
-Currently, as a <strong>Site Reliability Engineer at AccelByte</strong>,
-        my primary focus revolves around ensuring the reliability and
-        performance of our critical systems. This directly involves defining and
-        supporting Service Level Indicators (SLIs) and Objectives (SLOs) to
-        maintain high availability.
-</p> <p>
-I actively participate in incident management, working to minimize
-        disruptions and contributing to our operational knowledge base with MOPs
-        and runbooks. Furthermore, I am deeply involved in enhancing our change
-        and release processes, advocating for more structured and reliable CI/CD
-        pipelines.
-</p> <p>
-I enjoy working on complex infrastructure challenges and finding ways to
-        bridge the gap between development and operations through automation and
-        measured reliability.
-</p> </div> </article>  </div> </main> </body></html>
+</script> </div> </header>  <article class="max-w-3xl mx-auto"> <a href="/blog" class="inline-flex items-center text-sm font-semibold text-blue-600 dark:text-blue-400 mb-8 hover:text-blue-700 dark:hover:text-blue-300 transition"> <span class="mr-1">←</span> Back to blog
+</a>  <header class="mb-12"> <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-4 leading-tight"> Membuat Droplet pada DigitalOcean menggunakan Terraform </h1> <div class="flex items-center gap-3"> <p class="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider"> November 14, 2022 </p> <span class="text-slate-300 dark:text-slate-700">•</span> <p class="text-sm text-slate-500 dark:text-slate-400 italic">
+By Yudi Yuswita Sunarto </p> </div> </header> <div class="prose prose-slate lg:prose-xl max-w-none dark:prose-invert prose-headings:text-slate-900 dark:prose-headings:text-white prose-a:text-blue-600 dark:prose-a:text-blue-400 hover:prose-a:text-blue-700 dark:hover:prose-a:text-blue-300"> <article><p><img src="https://img.freepik.com/premium-photo/bricklayer-industrial-worker-installing-brick-masonry-with-trowel-putty-knife-construction-site_33835-1135.jpg?w=1380" alt="terraform"/></p><p>Yaaa memang bukan suatu hal yang wah, sekali lagi diriku mengingatkan bahwa web ini hanya sekedar catatan biasa oleh <a href="http://github.com/yuswitayudi">Yudi</a>.</p><h2 id="intro">Intro</h2><p>Sebenarnya membuat droplet pada DigitalOcean bisa sekali menggunakan Web UI melalui browser, akan tetapi jika suatu saat kita akan membuat droplet dengan jumlah yang banyak atau bisa dibilang repetitif dan dengan spesifikasi droplet yang sama. Maka butuh banyak klak klik klak klik oleh jari kita untuk bisa mencapai tujuan tersebut.</p><p>Oleh karena itu, berbekal ilmu saya yang masih sedikit di <a href="https://yuswitayudi.github.io">catatan</a> saya menambah untuk bagaimana cara membuat droplet menggunakan terraform.</p><h2 id="main">Main</h2><p>Untuk sekarang saya belum menuliskan cara menggunakan terraform ya. Jadi saya berharap yang membaca tahu dasarnya terlebih dahulu soal terraform, mungkin next catatan boleh lah dibuat basic tentang terraform.</p><p>Terraform sendiri membutuhkan file <code>main.tf</code> yang mendefinisikan resources dan hal lain sesuai kebutuhan, dan berikut conton <code>main.tf</code> untuk membuat droplet pada DigitalOcean.</p><pre>terraform {
+  required_version = &quot;&gt;= 1.0.0&quot;
+
+  required_providers {
+    digitalocean = {
+      source  = &quot;digitalocean/digitalocean&quot;
+      version = &quot;~&gt; 2.0&quot;
+    }
+  }
+}
+
+provider &quot;digitalocean&quot; {}
+
+resource &quot;digitalocean_droplet&quot; &quot;terramino&quot; {
+  image     = &quot;ubuntu-22-10-x64&quot;
+  name      = &quot;Your-Hostname-Droplet&quot;
+  region    = &quot;sgp1&quot;
+  size      = &quot;s-2vcpu-4gb&quot;
+  user_data = file(&quot;terramino_app.yaml&quot;)
+}
+</pre><p>nah dari file diatas ada satu file bernama <code>terramino_app.yaml</code> di file tersebut kita bisa mendefinisikan apa yang akan dilakukan setelah droplet dibuat. Contoh.</p><pre>#cloud-config
+groups:
+  - ubuntu: [root,sys]
+  - your_username
+
+# Add users to the system. Users are added after groups are added.
+users:
+  - default
+  - name: your_username
+    gecos: your_username
+    shell: /bin/bash
+    primary_group: your_username
+    sudo: ALL=(ALL:ALL) ALL
+    groups: users, admin
+    lock_passwd: false
+    ssh_authorized_keys:
+      - ssh pub key
+</pre><p>2 File tersebut adalah basic dari pembuatan droplet, jalankan <code>terraform init</code> untuk inisiasi dan <code>terraform apply</code> untuk membuat droplet pada digitialocean.</p><p>Oh iya pada terraform ini kita membutuhkan API_TOKEN dari DigitalOcean untuk bisa berkomunikasi. Genarate token terlebih dahulu pada web DigitalOcean pada menu API dan jalankan perintah <code>export DIGITALOCEAN_ACCESS_TOKEN=your_token</code>. Sebenarnya untuk API_TOKEN bisa ditambahkan pada credentials di file, namun untuk kali ini kita menggunakan cara mendefinisikan pada environment variable.</p></article> </div> </article>  </div> </main> </body></html>

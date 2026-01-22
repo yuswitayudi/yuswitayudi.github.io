@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>About · AWNESIA</title><script>
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Menghubungkan Slack dan Jenkins untuk mendapatkan notifikasi · AWNESIA</title><script>
       if (
         localStorage.getItem("color-theme") === "dark" ||
         (!("color-theme" in localStorage) &&
@@ -61,24 +61,6 @@
 
   // Run after every page swap (for View Transitions)
   document.addEventListener("astro:after-swap", initTheme);
-</script> </div> </header>  <article class="max-w-3xl mx-auto"> <header class="mb-12"> <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white italic underline decoration-blue-600 decoration-3">
-About Me
-</h1> <p class="text-slate-600 dark:text-slate-400 mt-4 text-lg md:text-xl leading-relaxed">
-DevOps Engineer, Jr. Site Reliability Engineer and Comedy Lover
-</p> </header> <div class="prose prose-slate lg:prose-xl max-w-none dark:prose-invert"> <p>
-Currently, as a <strong>Site Reliability Engineer at AccelByte</strong>,
-        my primary focus revolves around ensuring the reliability and
-        performance of our critical systems. This directly involves defining and
-        supporting Service Level Indicators (SLIs) and Objectives (SLOs) to
-        maintain high availability.
-</p> <p>
-I actively participate in incident management, working to minimize
-        disruptions and contributing to our operational knowledge base with MOPs
-        and runbooks. Furthermore, I am deeply involved in enhancing our change
-        and release processes, advocating for more structured and reliable CI/CD
-        pipelines.
-</p> <p>
-I enjoy working on complex infrastructure challenges and finding ways to
-        bridge the gap between development and operations through automation and
-        measured reliability.
-</p> </div> </article>  </div> </main> </body></html>
+</script> </div> </header>  <article class="max-w-3xl mx-auto"> <a href="/blog" class="inline-flex items-center text-sm font-semibold text-blue-600 dark:text-blue-400 mb-8 hover:text-blue-700 dark:hover:text-blue-300 transition"> <span class="mr-1">←</span> Back to blog
+</a>  <header class="mb-12"> <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-4 leading-tight"> Menghubungkan Slack dan Jenkins untuk mendapatkan notifikasi </h1> <div class="flex items-center gap-3"> <p class="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider"> December 06, 2022 </p> <span class="text-slate-300 dark:text-slate-700">•</span> <p class="text-sm text-slate-500 dark:text-slate-400 italic">
+By Yudi Yuswita Sunarto </p> </div> </header> <div class="prose prose-slate lg:prose-xl max-w-none dark:prose-invert prose-headings:text-slate-900 dark:prose-headings:text-white prose-a:text-blue-600 dark:prose-a:text-blue-400 hover:prose-a:text-blue-700 dark:hover:prose-a:text-blue-300"> <article><p><img src="https://img.freepik.com/free-photo/two-confident-business-man-shaking-hands-during-meeting-office-success-dealing-greeting-partner-concept_1423-199.jpg?w=740&t=st=1670293052~exp=1670293652~hmac=cd72d25bdb2837201c78d9b5e02860bb99c48137108114a9821c62e48fe96b27" alt="connections"/></p><p>Jenkins merupakan salahsatu aplikasi CI/CD yang sering digunakan untuk deployment sebuah aplikasi di production. Karena kemudahan untuk customizable deployment bisa dengan <em>declarative pipeline</em> maupun <em>freestyle pipeline</em>. Oleh karena kemudahan dan manfaat yang besar tak khayal jenkins menjadi salah satu tool <a href="/tags/ci/cd">CI/CD</a> favorit. (gilak sih mirip reporter)</p><p>Dalam perkembangannya ketika kita menggunakan Jenkins untuk bisa mengetahui seluruh pipeline sudah selesai berjalan atau belum terkadang kita harus mengakses dashboard untuk mengetahui prosesnya. Sebenarnya ada plugin sendiri dari jenkins menyediakan notifikasi ke email ketika pipeline gagal selesai, namun tidak ada notifikasi kapan pipeline jalan dan selesai.</p><p>Oleh karena itu perlu menggunakan tool lain yakni kolaborasi Slack x Jenkins. Berikut stepnya:</p><h4 id="requirements">Requirements</h4><ul><li>Akun <a href="https://slack.com">slack</a></li><li>Jenkins</li><li>Jenkins CI (aplikasi dari slack untuk koneksi ke jenkins)</li></ul><h4 id="tambahkan-jenkins-ci-kedalam-workspace">Tambahkan Jenkins CI kedalam workspace</h4><p>Kunjungi slack app directory. Cari Jenkins CI dan install ke workspace yang akan kita gunakan untuk notifikasi monitoring. https://slack.com/apps/A0F7VRFKN-jenkins-ci?tab=more_info</p><h4 id="install-plugin-slack-notification">Install Plugin Slack Notification</h4><p>Pada jenkins memerlukan plugin agar bisa terhubung ke API slack, dengan menginstall plugin <code>Slack Notifiactions</code> <img src="https://a.slack-edge.com/80588/img/integrations/jenkins-ci_step2.png" alt="slack"/></p><ul><li>Setelah terinstall tambahan credentials menggunakan type <code>Secrets text</code></li><li>Masuk ke manage jenkins -&gt; Configure System dan cari pengaturan tentang <code>Slack</code></li><li>Tambahkan workspace sesuai nama yang sudah dibuat ketika register slack</li><li>Tambahkan credentials sesuai yang sudah dibuat tadi</li><li>Pilih channel yang akan digunakan untuk monitoring berawal dengan #</li><li>Test connection apakah sudah bisa terhubung atau belum</li></ul><h4 id="menambahkanpost-build-actions">MenambahkanPost-build Actions</h4><p>Setelah koneksi berhasil dilakaukan, selanjutnya untuk semua pipeline kita perlu menambahkan Post-build Actions dan memilih <code>Slack Notifications</code></p><p><img src="https://a.slack-edge.com/80588/img/integrations/jenkins-ci_step5.png" alt="slack 1"/> <img src="https://a.slack-edge.com/80588/img/integrations/jenkins-ci_step6.png" alt="slack 2"/></p><p>Dan setiap proses ketika pipeline jalan dan selesai akan ternotifikasi ke slack.</p></article> </div> </article>  </div> </main> </body></html>

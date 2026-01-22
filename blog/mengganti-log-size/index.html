@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>About · AWNESIA</title><script>
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mengganti Ukuran Log Docker Container · AWNESIA</title><script>
       if (
         localStorage.getItem("color-theme") === "dark" ||
         (!("color-theme" in localStorage) &&
@@ -61,24 +61,17 @@
 
   // Run after every page swap (for View Transitions)
   document.addEventListener("astro:after-swap", initTheme);
-</script> </div> </header>  <article class="max-w-3xl mx-auto"> <header class="mb-12"> <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white italic underline decoration-blue-600 decoration-3">
-About Me
-</h1> <p class="text-slate-600 dark:text-slate-400 mt-4 text-lg md:text-xl leading-relaxed">
-DevOps Engineer, Jr. Site Reliability Engineer and Comedy Lover
-</p> </header> <div class="prose prose-slate lg:prose-xl max-w-none dark:prose-invert"> <p>
-Currently, as a <strong>Site Reliability Engineer at AccelByte</strong>,
-        my primary focus revolves around ensuring the reliability and
-        performance of our critical systems. This directly involves defining and
-        supporting Service Level Indicators (SLIs) and Objectives (SLOs) to
-        maintain high availability.
-</p> <p>
-I actively participate in incident management, working to minimize
-        disruptions and contributing to our operational knowledge base with MOPs
-        and runbooks. Furthermore, I am deeply involved in enhancing our change
-        and release processes, advocating for more structured and reliable CI/CD
-        pipelines.
-</p> <p>
-I enjoy working on complex infrastructure challenges and finding ways to
-        bridge the gap between development and operations through automation and
-        measured reliability.
-</p> </div> </article>  </div> </main> </body></html>
+</script> </div> </header>  <article class="max-w-3xl mx-auto"> <a href="/blog" class="inline-flex items-center text-sm font-semibold text-blue-600 dark:text-blue-400 mb-8 hover:text-blue-700 dark:hover:text-blue-300 transition"> <span class="mr-1">←</span> Back to blog
+</a>  <header class="mb-12"> <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-4 leading-tight"> Mengganti Ukuran Log Docker Container </h1> <div class="flex items-center gap-3"> <p class="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider"> November 24, 2022 </p> <span class="text-slate-300 dark:text-slate-700">•</span> <p class="text-sm text-slate-500 dark:text-slate-400 italic">
+By Yudi Yuswita Sunarto </p> </div> </header> <div class="prose prose-slate lg:prose-xl max-w-none dark:prose-invert prose-headings:text-slate-900 dark:prose-headings:text-white prose-a:text-blue-600 dark:prose-a:text-blue-400 hover:prose-a:text-blue-700 dark:hover:prose-a:text-blue-300"> <article><p><img src="https://img.freepik.com/free-photo/vintage-tailor-ruler-isolated-down-part-aged-wooden-table_346278-918.jpg?w=1380&t=st=1669281043~exp=1669281643~hmac=cf874a267123fad2f648bda388d90fb2f41d1940869263dc9bcdeb2e78c70e6f" alt/></p><p>Ukuran log yang besar pasti suatu saat akan membuatmu mikir-mikir tentang disk kan. Nah untuk itu kita perlu mengatur berapa ukuran yang ada pada docker container. Ini dijalankan dengan docker-compose maupun docker container.</p><h3 id="docker-compose">Docker compose</h3><pre>version: &#39;3&#39;
+services:
+  nginx:
+    image: nginx:latest
+    hostname: ubuntu
+    logging:
+     options:
+       tag: &quot;{{.Name}}&quot;
+       max-size: 50m
+    labels:
+      - &quot;autoheal=true&quot;
+</pre><h3 id="docker-container">Docker container</h3><p><code>docker run -d --name nginx --log-opt max-size=50m</code></p><p>Dari kedua cara diatas akan membatasi log ke ukuran 50 megabytes saja. Oiya tambahan di file docker-compose diatas terdapat label untuk autoheal, itu digunakan untuk membuat container baru ketika container statusnya sudah <code>unhealthy</code>. Sumber bisa baca disini https://hub.docker.com/r/willfarrell/autoheal/</p></article> </div> </article>  </div> </main> </body></html>

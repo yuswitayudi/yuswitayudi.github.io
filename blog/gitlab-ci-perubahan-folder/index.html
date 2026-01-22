@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>About · AWNESIA</title><script>
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Melakukan Deploy ketika ada Perubahan pada Folder Menggunakan GitLab CI · AWNESIA</title><script>
       if (
         localStorage.getItem("color-theme") === "dark" ||
         (!("color-theme" in localStorage) &&
@@ -61,24 +61,28 @@
 
   // Run after every page swap (for View Transitions)
   document.addEventListener("astro:after-swap", initTheme);
-</script> </div> </header>  <article class="max-w-3xl mx-auto"> <header class="mb-12"> <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white italic underline decoration-blue-600 decoration-3">
-About Me
-</h1> <p class="text-slate-600 dark:text-slate-400 mt-4 text-lg md:text-xl leading-relaxed">
-DevOps Engineer, Jr. Site Reliability Engineer and Comedy Lover
-</p> </header> <div class="prose prose-slate lg:prose-xl max-w-none dark:prose-invert"> <p>
-Currently, as a <strong>Site Reliability Engineer at AccelByte</strong>,
-        my primary focus revolves around ensuring the reliability and
-        performance of our critical systems. This directly involves defining and
-        supporting Service Level Indicators (SLIs) and Objectives (SLOs) to
-        maintain high availability.
-</p> <p>
-I actively participate in incident management, working to minimize
-        disruptions and contributing to our operational knowledge base with MOPs
-        and runbooks. Furthermore, I am deeply involved in enhancing our change
-        and release processes, advocating for more structured and reliable CI/CD
-        pipelines.
-</p> <p>
-I enjoy working on complex infrastructure challenges and finding ways to
-        bridge the gap between development and operations through automation and
-        measured reliability.
-</p> </div> </article>  </div> </main> </body></html>
+</script> </div> </header>  <article class="max-w-3xl mx-auto"> <a href="/blog" class="inline-flex items-center text-sm font-semibold text-blue-600 dark:text-blue-400 mb-8 hover:text-blue-700 dark:hover:text-blue-300 transition"> <span class="mr-1">←</span> Back to blog
+</a>  <header class="mb-12"> <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-4 leading-tight"> Melakukan Deploy ketika ada Perubahan pada Folder Menggunakan GitLab CI </h1> <div class="flex items-center gap-3"> <p class="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider"> November 22, 2022 </p> <span class="text-slate-300 dark:text-slate-700">•</span> <p class="text-sm text-slate-500 dark:text-slate-400 italic">
+By Yudi Yuswita Sunarto </p> </div> </header> <div class="prose prose-slate lg:prose-xl max-w-none dark:prose-invert prose-headings:text-slate-900 dark:prose-headings:text-white prose-a:text-blue-600 dark:prose-a:text-blue-400 hover:prose-a:text-blue-700 dark:hover:prose-a:text-blue-300"> <article><p><img src="https://img.freepik.com/free-photo/construction-works-frankfurt-downtown-germany_1268-20907.jpg?w=1480&t=st=1669106538~exp=1669107138~hmac=b90b84671fbb8676c7985802ca45dd89f031809cefcb4be0b4adedf5433fd964" alt="Trigger folder"/></p><p>Yakkk</p><p>Again-again semua catatan yang telah tertulis di web ini murni dari sudut pandang sang penulis ya, jadi apabila ada perbedaan ya wajar dong.</p><p>Oke langsung ke contoh kasus, biasanya untuk depoyment menggunakan metode gitfow akan ada proses trigering untuk melakukan suatu aksi ketika sudah merged ke salah satu branch. Contoh apabila ada merged ke branch staging, maka akan triggering ke webhook yang ada di jenkins untuk deployment pada service yang berada pada environment staging. Begitupun jika ada merged pada branch production akan melakukan hal yang sama.</p><table><thead><tr><th>Dev</th><th>Staging</th><th>Production</th></tr></thead></table><p>Namun bagaimana jika dalam suatu repo yang terdapat pada gitlab memilik banyak service? dan kita hanya ingin melakukan deployment pada service yang berada pada folder tertentu saja? Inilah jawabannya :))</p><pre>Project_repository
+|____Frontend
+|    |___Readme.md
+|        |___app/
+|____Backend
+|    |___Readme.md
+|        |___app/
+</pre><p>Nah semisal kita memiliki contoh struktur folder seperti diatas, semisal suatu aplikasi dijalankan melalui folder <code>Frontend</code>. Kita hanya akan melakukan deployment ketika ada perubahan pada <code>Frontend</code> saja. Maka yang perlu dilakukan pada config <code>.gitlab-ci.yml</code> adalah sebagai berikut</p><pre>before_script:
+  - your_command_before_run_script
+
+stages:
+  - deploy
+
+deploy_frontend:
+  stage: deploy
+  rules:
+    - if: $CI_PIPELINE_SOURCE == &quot;push&quot; &amp;&amp; $CI_COMMIT_BRANCH == &quot;staging&quot;
+      changes:
+        - frontend/**/*
+  script: 
+    - your_command_to_deploy_app ex: curl jenkins url webhook
+
+</pre><h4 id="keteragan">Keteragan:</h4><ul><li>pada rules diatas menggunakan <code>$CI_PIPELINE_SOURCE == &quot;push&quot; &amp;&amp; $CI_COMMIT_BRANCH == &quot;staging&quot;</code> itu berarti ketika ada mode <code>push</code> pada branch <code>staging</code></li><li>dan ketika ada perubahan pada folder <code>frontend</code> maka gitlab ci akan menjalankan <code>script</code></li></ul><p>Jadi tinggal sesuaikan dengan kebutuhan pada environment masing-masing.</p><p>Gitu dulu lah yaaa</p></article> </div> </article>  </div> </main> </body></html>

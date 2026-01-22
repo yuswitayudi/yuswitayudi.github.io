@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>About · AWNESIA</title><script>
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Cara Menjalankan Python File Menggunakan Gunicorn · AWNESIA</title><script>
       if (
         localStorage.getItem("color-theme") === "dark" ||
         (!("color-theme" in localStorage) &&
@@ -61,24 +61,29 @@
 
   // Run after every page swap (for View Transitions)
   document.addEventListener("astro:after-swap", initTheme);
-</script> </div> </header>  <article class="max-w-3xl mx-auto"> <header class="mb-12"> <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white italic underline decoration-blue-600 decoration-3">
-About Me
-</h1> <p class="text-slate-600 dark:text-slate-400 mt-4 text-lg md:text-xl leading-relaxed">
-DevOps Engineer, Jr. Site Reliability Engineer and Comedy Lover
-</p> </header> <div class="prose prose-slate lg:prose-xl max-w-none dark:prose-invert"> <p>
-Currently, as a <strong>Site Reliability Engineer at AccelByte</strong>,
-        my primary focus revolves around ensuring the reliability and
-        performance of our critical systems. This directly involves defining and
-        supporting Service Level Indicators (SLIs) and Objectives (SLOs) to
-        maintain high availability.
-</p> <p>
-I actively participate in incident management, working to minimize
-        disruptions and contributing to our operational knowledge base with MOPs
-        and runbooks. Furthermore, I am deeply involved in enhancing our change
-        and release processes, advocating for more structured and reliable CI/CD
-        pipelines.
-</p> <p>
-I enjoy working on complex infrastructure challenges and finding ways to
-        bridge the gap between development and operations through automation and
-        measured reliability.
-</p> </div> </article>  </div> </main> </body></html>
+</script> </div> </header>  <article class="max-w-3xl mx-auto"> <a href="/blog" class="inline-flex items-center text-sm font-semibold text-blue-600 dark:text-blue-400 mb-8 hover:text-blue-700 dark:hover:text-blue-300 transition"> <span class="mr-1">←</span> Back to blog
+</a>  <header class="mb-12"> <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-4 leading-tight"> Cara Menjalankan Python File Menggunakan Gunicorn </h1> <div class="flex items-center gap-3"> <p class="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider"> October 17, 2022 </p> <span class="text-slate-300 dark:text-slate-700">•</span> <p class="text-sm text-slate-500 dark:text-slate-400 italic">
+By Yudi Yuswita Sunarto </p> </div> </header> <div class="prose prose-slate lg:prose-xl max-w-none dark:prose-invert prose-headings:text-slate-900 dark:prose-headings:text-white prose-a:text-blue-600 dark:prose-a:text-blue-400 hover:prose-a:text-blue-700 dark:hover:prose-a:text-blue-300"> <article><p><img src="https://img.freepik.com/free-photo/marabou-stork-bird-closeup-head-with-natural-background_488145-1161.jpg?w=1380&t=st=1667445952~exp=1667446552~hmac=fad6ae320097c71e87b13dfb720e25a7f3a34c8a2d52de2a5ac1b3ebfd2bee72" alt="gunicorn"/></p><p>entah kenapa saya nyari gambar di freepik kebanyakan muncul itu, yaudahlahyaaa.</p><p>Ini adalah cara menjalankan file python menggunakan gunicorn. Pada contoh ini misal kita memilik api server dari file python dengan nama <code>api_flask.py</code></p><p>Maka cara menjalankannya adalah seperti ini:</p><pre>gunicorn --bind 0.0.0.0:5000 api_flask:app -w 2 --log-config logging.ini --access-logfile -
+</pre><p><strong>keterangan:</strong></p><p>api_flask = nama file python yg akan dijalankan. nama asli <code>api_flask.py</code></p><p>-w = workers yang akan dijalankan.</p><p>-—log-config = file log config yang akan digunakan untuk logging gunicorn.</p><p>contoh log file gunicorn.</p><p><strong>logging.ini</strong></p><pre>[loggers]
+keys=root
+
+[handlers]
+keys=consoleHandler
+
+[formatters]
+keys=simpleFormatter
+
+[logger_root]
+level=DEBUG
+handlers=consoleHandler
+
+[handler_consoleHandler]
+class=StreamHandler
+level=DEBUG
+formatter=simpleFormatter
+args=(sys.stdout,)
+
+[formatter_simpleFormatter]
+format=[%(asctime)s] [%(process)d] [%(levelname)s] - %(module)s - %(message)s
+datefmt=%Y-%m-%d %H:%M:%S %z
+</pre></article> </div> </article>  </div> </main> </body></html>

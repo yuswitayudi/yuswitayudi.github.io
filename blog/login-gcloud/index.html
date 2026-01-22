@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>About · AWNESIA</title><script>
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>How to Login Google cloud witch CLI · AWNESIA</title><script>
       if (
         localStorage.getItem("color-theme") === "dark" ||
         (!("color-theme" in localStorage) &&
@@ -61,24 +61,10 @@
 
   // Run after every page swap (for View Transitions)
   document.addEventListener("astro:after-swap", initTheme);
-</script> </div> </header>  <article class="max-w-3xl mx-auto"> <header class="mb-12"> <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white italic underline decoration-blue-600 decoration-3">
-About Me
-</h1> <p class="text-slate-600 dark:text-slate-400 mt-4 text-lg md:text-xl leading-relaxed">
-DevOps Engineer, Jr. Site Reliability Engineer and Comedy Lover
-</p> </header> <div class="prose prose-slate lg:prose-xl max-w-none dark:prose-invert"> <p>
-Currently, as a <strong>Site Reliability Engineer at AccelByte</strong>,
-        my primary focus revolves around ensuring the reliability and
-        performance of our critical systems. This directly involves defining and
-        supporting Service Level Indicators (SLIs) and Objectives (SLOs) to
-        maintain high availability.
-</p> <p>
-I actively participate in incident management, working to minimize
-        disruptions and contributing to our operational knowledge base with MOPs
-        and runbooks. Furthermore, I am deeply involved in enhancing our change
-        and release processes, advocating for more structured and reliable CI/CD
-        pipelines.
-</p> <p>
-I enjoy working on complex infrastructure challenges and finding ways to
-        bridge the gap between development and operations through automation and
-        measured reliability.
-</p> </div> </article>  </div> </main> </body></html>
+</script> </div> </header>  <article class="max-w-3xl mx-auto"> <a href="/blog" class="inline-flex items-center text-sm font-semibold text-blue-600 dark:text-blue-400 mb-8 hover:text-blue-700 dark:hover:text-blue-300 transition"> <span class="mr-1">←</span> Back to blog
+</a>  <header class="mb-12"> <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-4 leading-tight"> How to Login Google cloud witch CLI </h1> <div class="flex items-center gap-3"> <p class="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider"> February 11, 2025 </p> <span class="text-slate-300 dark:text-slate-700">•</span> <p class="text-sm text-slate-500 dark:text-slate-400 italic">
+By Yudi Yuswita Sunarto </p> </div> </header> <div class="prose prose-slate lg:prose-xl max-w-none dark:prose-invert prose-headings:text-slate-900 dark:prose-headings:text-white prose-a:text-blue-600 dark:prose-a:text-blue-400 hover:prose-a:text-blue-700 dark:hover:prose-a:text-blue-300"> <article><p><img src="https://img.freepik.com/free-vector/digital-marketing-icons-pack_1114-59.jpg?t=st=1739245925~exp=1739249525~hmac=660754e40a6078466b39fee2640234e24190bef4ebeccde017dc1e6c43230cb1&w=826" alt="gcloud"/></p><h3 id="how-to-login-to-google-cloud-using-the-command-line-cli">How to Login to Google Cloud Using the Command Line (CLI)</h3><p>Hey everyone! Welcome back to my blog at <a href="https://yuswitayudi.github.io">yuswitayudi.github.io</a>. Today, I’m going to walk through how to log in to Google Cloud using the command line. If you’re managing cloud resources, using the CLI can save a lot of time and make things more efficient.</p><h4 id="prerequisites">Prerequisites</h4><p>Before starting, make sure you have:</p><ul><li>A Google Cloud account</li><li>Google Cloud SDK installed on your system</li></ul><pre>you just need run this if you are  linux based sudo snap install google-cloud-cli --classic
+</pre><p>If Google Cloud SDK isn’t installed yet, follow <a href="https://cloud.google.com/sdk/docs/install">this guide</a> to set it up.</p><h4 id="step-1-open-the-terminal">Step 1: Open the Terminal</h4><p>The first step is to open a terminal or command prompt. This is where the authentication commands will be executed.</p><h4 id="step-2-run-the-login-command">Step 2: Run the Login Command</h4><p>To authenticate, run the following command:</p><pre data-language="sh">gcloud auth login
+</pre><p>This will open a web browser prompting for Google account sign-in. Please select the gmail account that have access to Google cloud. After granting permissions, a success message should appear in the terminal.</p><h4 id="step-3-set-the-default-project">Step 3: Set the Default Project</h4><p>After logging in, set the default project with:</p><pre data-language="sh">gcloud config set project [PROJECT_ID]
+</pre><p>Replace <code>[PROJECT_ID]</code> with the actual project ID, which can be found in the Google Cloud Console.</p><h4 id="step-4-verify-authentication">Step 4: Verify Authentication</h4><p>To confirm everything is set up correctly, run:</p><pre data-language="sh">gcloud auth list
+</pre><p>This will display the active authenticated account. If the expected email appears, the setup is complete.</p><h4 id="conclusion">Conclusion</h4><p>That’s it! Now logging into Google Cloud using the CLI is straightforward. Whether managing projects manually or automating tasks, the command line provides an efficient way to interact with Google Cloud.</p></article> </div> </article>  </div> </main> </body></html>
