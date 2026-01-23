@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Create SSL Nginx with Ansible · AWNESIA</title><script>
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>About · AWNESIA</title><script>
       if (
         localStorage.getItem("color-theme") === "dark" ||
         (!("color-theme" in localStorage) &&
@@ -67,55 +67,24 @@
 
   // Run after every page swap (for View Transitions)
   document.addEventListener("astro:after-swap", initTheme);
-</script> </div> </header>  <article class="max-w-3xl mx-auto"> <a href="/blog" class="inline-flex items-center text-sm font-semibold text-blue-600 dark:text-blue-400 mb-8 hover:text-blue-700 dark:hover:text-blue-300 transition"> <span class="mr-1">←</span> Back to blog
-</a>  <header class="mb-12"> <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-4 leading-tight"> Create SSL Nginx with Ansible </h1> <div class="flex items-center gap-3"> <p class="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider"> December 14, 2022 </p> <span class="text-slate-300 dark:text-slate-700">•</span> <p class="text-sm text-slate-500 dark:text-slate-400 italic">
-By Yudi Yuswita Sunarto </p> </div> </header> <div class="prose prose-slate lg:prose-xl max-w-none dark:prose-invert prose-headings:text-slate-900 dark:prose-headings:text-white prose-a:text-blue-600 dark:prose-a:text-blue-400 hover:prose-a:text-blue-700 dark:hover:prose-a:text-blue-300"> <article><p><img src="https://img.freepik.com/free-photo/infrastructure-bridge_1127-2226.jpg?w=1380&t=st=1669198797~exp=1669199397~hmac=f55619eceb4191fb043a3ca8fe30cd9d2bbffc8f296b1924eaa5e4131502e7aa" alt="multiple way"/></p><p>This is maybe one of the longest notes in this notes. Here we go....</p><p>First before I meet this ansible roles, when I want to deploy domain name with nginx server. I only install and deploy ssl to manage HTTPS certbot with manually installation which is use standard command line. This is very repetitive and there will be chances human error.</p><p>requirements:</p><ul><li>nginx</li><li>ansible-playbook</li><li>ssh connection</li></ul><p>So when I feel I can be better than it, I decide to use ansible to create repetitive task. And after the long way I create this ansible roles:</p><h3 id="step-1">Step 1</h3><p>I assume that you have knowledge about ansible playbook, basically ansible playbook need roles and host to apply.</p><p>first you must create <code>main.yml</code> on roles folder.</p><pre>- name: Install certbot
-  package: 
-    update_cache: yes 
-    name: 
-      - certbot
-      - python3-certbot-nginx
-    state: latest
-
-- name: Copy file config nginx-domain.conf to target directory
-  template:
-    src: files/nginx-domain.conf
-    dest: &quot;/etc/nginx/sites-available/{{ nginx_domain_name }}&quot;
-
-- name: Check folder exist
-  stat: path=/etc/nginx/sites-enabled/{{ nginx_domain_name }}
-  register: stat_result
-
-- name: Unlinking file config if exist sites-enabled
-  when: stat_result.stat.exists
-  shell:
-     cmd: unlink /etc/nginx/sites-enabled/{{ nginx_domain_name }}
-
-- name: Linking file config nginx config into sites-enabled
-  shell:
-     cmd: ln -s /etc/nginx/sites-available/{{ nginx_domain_name }} /etc/nginx/sites-enabled/
-
-- name: restart nginx
-  shell:
-     cmd: service nginx restart
-
-- name: Generate new certificate if one doesn&#39;t exist.
-  shell: &quot;certbot --nginx --noninteractive --agree-tos --email {{ certbot_email }} -d {{ nginx_domain_name }}&quot;
-
-- name: restart nginx
-  shell:
-     cmd: service nginx reload
-
-</pre><p>Description:</p><ul><li>in the <code>main.yml</code> above run to install certbot and then copy template <code>nginx-domain.conf</code></li><li>copy <code>nginx-domain.conf</code> to config nginx directory</li><li>generate new certificate whit <code>certbot</code> command</li></ul><h4 id="nginx-domainconf-template">nginx-domain.conf template</h4><pre>server {
-   server_name {{ nginx_domain_name }};
-   access_log /var/log/nginx/{{ nginx_domain_name }}-acc.log;
-   error_log /var/log/nginx/{{ nginx_domain_name }}-err.log;
-   listen 80;
-   root {{ nginx_root_path }};
-
-   location / {
- 		try_files $uri $uri/ =404;
-    }
-
-}
-</pre><p>I put variable <code>nginx_domain_name</code> and <code>nginx_root_path</code> on folder <code>group_vars</code> with <code>domain-nginx</code> filename.</p></article> </div> </article>  </div> </main> </body></html>
+</script> </div> </header>  <article class="max-w-3xl mx-auto"> <header class="mb-12"> <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white italic underline decoration-blue-600 decoration-3">
+About Me
+</h1> <p class="text-slate-600 dark:text-slate-400 mt-4 text-lg md:text-xl leading-relaxed">
+DevOps Engineer, Jr. Site Reliability Engineer and Comedy Lover
+</p> </header> <div class="prose prose-slate lg:prose-xl max-w-none dark:prose-invert"> <p>
+Currently, as a <strong>Site Reliability Engineer at AccelByte</strong>,
+        my primary focus revolves around ensuring the reliability and
+        performance of our critical systems. This directly involves defining and
+        supporting Service Level Indicators (SLIs) and Objectives (SLOs) to
+        maintain high availability.
+</p> <p>
+I actively participate in incident management, working to minimize
+        disruptions and contributing to our operational knowledge base with MOPs
+        and runbooks. Furthermore, I am deeply involved in enhancing our change
+        and release processes, advocating for more structured and reliable CI/CD
+        pipelines.
+</p> <p>
+I enjoy working on complex infrastructure challenges and finding ways to
+        bridge the gap between development and operations through automation and
+        measured reliability.
+</p> </div> </article>  </div> </main> </body></html>
