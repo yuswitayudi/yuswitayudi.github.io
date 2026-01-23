@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>About · AWNESIA</title><script>
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The Journey: Migrating my Website to Astro and GitHub Pages · AWNESIA</title><script>
       if (
         localStorage.getItem("color-theme") === "dark" ||
         (!("color-theme" in localStorage) &&
@@ -61,24 +61,6 @@
 
   // Run after every page swap (for View Transitions)
   document.addEventListener("astro:after-swap", initTheme);
-</script> </div> </header>  <article class="max-w-3xl mx-auto"> <header class="mb-12"> <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white italic underline decoration-blue-600 decoration-3">
-About Me
-</h1> <p class="text-slate-600 dark:text-slate-400 mt-4 text-lg md:text-xl leading-relaxed">
-DevOps Engineer, Jr. Site Reliability Engineer and Comedy Lover
-</p> </header> <div class="prose prose-slate lg:prose-xl max-w-none dark:prose-invert"> <p>
-Currently, as a <strong>Site Reliability Engineer at AccelByte</strong>,
-        my primary focus revolves around ensuring the reliability and
-        performance of our critical systems. This directly involves defining and
-        supporting Service Level Indicators (SLIs) and Objectives (SLOs) to
-        maintain high availability.
-</p> <p>
-I actively participate in incident management, working to minimize
-        disruptions and contributing to our operational knowledge base with MOPs
-        and runbooks. Furthermore, I am deeply involved in enhancing our change
-        and release processes, advocating for more structured and reliable CI/CD
-        pipelines.
-</p> <p>
-I enjoy working on complex infrastructure challenges and finding ways to
-        bridge the gap between development and operations through automation and
-        measured reliability.
-</p> </div> </article>  </div> </main> </body></html>
+</script> </div> </header>  <article class="max-w-3xl mx-auto"> <a href="/blog" class="inline-flex items-center text-sm font-semibold text-blue-600 dark:text-blue-400 mb-8 hover:text-blue-700 dark:hover:text-blue-300 transition"> <span class="mr-1">←</span> Back to blog
+</a>  <header class="mb-12"> <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-4 leading-tight"> The Journey: Migrating my Website to Astro and GitHub Pages </h1> <div class="flex items-center gap-3"> <p class="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider"> January 22, 2026 </p> <span class="text-slate-300 dark:text-slate-700">•</span> <p class="text-sm text-slate-500 dark:text-slate-400 italic">
+By Yudi Yuswita Sunarto </p> </div> </header> <div class="prose prose-slate lg:prose-xl max-w-none dark:prose-invert prose-headings:text-slate-900 dark:prose-headings:text-white prose-a:text-blue-600 dark:prose-a:text-blue-400 hover:prose-a:text-blue-700 dark:hover:prose-a:text-blue-300"> <article><h1 id="the-journey-migrating-my-website-to-astro-and-github-pages-maintaining-a">The Journey: Migrating my Website to Astro and GitHub Pages Maintaining a</h1><p>personal website is always an evolving project. Recently, I decided to take a big leap: moving away from my old setup and migrating everything to <strong>Astro</strong>. Why Astro? Because it&#39;s incredibly fast, delivers almost zero JavaScript by default, and has a fantastic developer experience. But as with any migration, there were some hurdles to clear—specifically around hosting, domains, and automation. Here’s the story of how I did it. ## The Goal: Clean Domain, Modern Tech Initially, I was playing around with Cloudflare Workers/Pages, but it gave me a very long and hard-to-remember domain: <code>astro-personal-website.yudiyuswita.workers.dev</code>. I wanted my clean <code>yuswitayudi.github.io</code> domain back. However, I didn&#39;t want to lose the modern features of Astro or the ease of the <strong>Keystatic</strong> CMS I had just set up. ## Step 1: Solving the Build Logic Astro is great because it can be both a Server-Side Rendered (SSR) app and a Static Site Generator (SSG). To host on GitHub Pages for free, I had to switch to <strong>Static Mode</strong>. I updated my <code>astro.config.mjs</code> to remove the Cloudflare adapter and set <code>output: &#39;static&#39;</code>. This meant that instead of a running server, Astro would now just spit out a folder of pure HTML files during the build. ## Step 2: Automation with GitHub Actions I wanted a &quot;push once, deploy everywhere&quot; workflow. I set up a GitHub Action to do the heavy lifting. Now, every time I push to my source repository:</p><ol><li>It wakes up a virtual machine in GitHub. 2. It installs all my dependencies.</li><li>It builds the entire site. 4. It pushes the final files over to my <code>yuswitayudi.github.io</code> repository. Setting up the <strong>Deploy Keys</strong> was the trickiest part, but it allowed my two repositories to talk to each other securely without me having to manually copy files. ## Step 3: Improving the UX (Dark Mode &amp; SEO) While I was at it, I couldn&#39;t resist adding some &quot;pro&quot; features. - <strong>Dark Mode:</strong> I implemented a sleek toggle using Tailwind CSS and some client-side logic to remember user preferences. - <strong>SEO:</strong> I added a <code>robots.txt</code> to help search engines index the site correctly. - <strong>Drafts:</strong> I added a &quot;Draft&quot; feature in Keystatic so I can write half-finished posts without them showing up on the live site immediately. ## The Result Now, I have the best of both worlds: 1. <strong>Modern Stack:</strong> Astro + Keystatic + Tailwind. 2. <strong>Clean Domain:</strong> Back to my heritage on GitHub Pages. 3. <strong>Zero Maintenance:</strong> I just write, save, and 2 minutes later, the site is updated. This migration wasn&#39;t just about changing a framework; it was about building a more sustainable and professional home for my thoughts on tech and operations. Stay tuned for more posts!</li></ol></article> </div> </article>  </div> </main> </body></html>
